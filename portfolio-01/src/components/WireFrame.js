@@ -79,14 +79,43 @@ class ProductCategoryRow extends Component {
     }
   }
   
-  class FilterableProductTable extends Component {
+  class Main extends Component {
     render() {
       return (
         <div>
-          <SearchBar />
-          <ProductTable products={this.props.products} />
+          <Header />
+          <TransitionGroup>
+              <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+                  <Switch>
+                      <Route path='/home' component={HomePage} />
+                      <Route exact path='/directory' render={() => <Directory campsites={this.props.campsites} />} />
+                      <Route path='/directory/:campsiteId' component={CampsiteWithId} />
+                      <Route exact path='/contactus' render={() => <Contact postFeedback={this.props.postFeedback} resetFeedbackForm={this.props.resetFeedbackForm} />} />
+                      <Route exact path="/aboutus" render={() => <About partners={this.props.partners} />} />
+                      <Redirect to='/home' />
+                  </Switch>
+              </CSSTransition>
+          </TransitionGroup>
+          <Footer />
         </div>
       );
+    }
+  }
+
+  class Header extends Component {
+    render() {
+      return (
+        <React.Fragment>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <h1>Header</h1>
+                                <h2>A portfolio site like no other.</h2>
+                            </div>
+                        </div>
+                    </div>
+        </React.Fragment>
+      )
     }
   }
   
