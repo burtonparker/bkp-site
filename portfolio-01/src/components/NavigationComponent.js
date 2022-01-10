@@ -3,47 +3,13 @@ import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-class Navbar extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            isNavOpen: false,
-            isModalOpen: false
-        };
-
-        this.toggleNav = this.toggleNav.bind(this);
-        this.toggleModal = this.toggleModal.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
-    }
-
-    toggleNav() {
-        this.setState({
-            isNavOpen: !this.state.isNavOpen
-        });
-    }
-
-    toggleModal() {
-        this.setState({
-            isModalOpen: !this.state.isModalOpen
-        });
-    }
-
-    handleLogin(event) {
-        alert(`Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`);
-        this.toggleModal();
-        event.preventDefault();
-    }
+class Navigation extends Component {
 
     render() {
         return (
             <React.Fragment>
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className = "mr-auto" href="/"><img src="/assets/images/logo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
-                        <NavbarToggler onClick={this.toggleNav} />
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">
@@ -66,12 +32,11 @@ class Navbar extends Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
-                        </Collapse>
                     </div>
                 </Navbar>
             </React.Fragment>
         );
-    }
+    };
 }
 
-export default Navbar;
+export default Navigation;
