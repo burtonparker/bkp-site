@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
       return (
         <React.Fragment>
-                    <div className="container">
+                    <div className="container text-light bg-dark bg-gradient">
                         <div className="row">
                             <div className="col">
                                 <h1>Header</h1>
