@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, 
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
-import { BrowserRouter, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 class Navigation extends Component {
     render() {
         return (
             <React.Fragment>
-                <BrowserRouter>
                 <Navbar light className="bg-light" sticky="top" expand="md">
                     <div className="container justify-content-center">
                             <Nav navbar>
@@ -41,7 +40,6 @@ class Navigation extends Component {
                         <Route path='/about' />
                         <Route path='/contact' />
                     </Switch>
-                </BrowserRouter>
             </React.Fragment>
         );
     };
