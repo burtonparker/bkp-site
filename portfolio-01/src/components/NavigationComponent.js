@@ -9,7 +9,7 @@ class Navigation extends Component {
         return (
             <React.Fragment>
                 <BrowserRouter>
-                <Navbar light sticky="top" expand="md">
+                <Navbar light className="bg-light" sticky="top" expand="md">
                     <div className="container justify-content-center">
                             <Nav navbar>
                                 <NavItem>
