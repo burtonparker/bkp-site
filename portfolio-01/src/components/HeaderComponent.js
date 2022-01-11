@@ -7,8 +7,8 @@ class Header extends Component {
                     <div className="container text-light bg-dark bg-gradient">
                         <div className="row">
                             <div className="col">
-                                <h1>Header</h1>
-                                <h2>A portfolio site like no other.</h2>
+                                <h1>Portfolio</h1>
+                                <h2>You can't love your team without hating another team.</h2>
                             </div>
                         </div>
                     </div>
