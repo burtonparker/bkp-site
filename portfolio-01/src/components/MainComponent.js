@@ -4,6 +4,7 @@ import { resetWarningCache } from 'prop-types';
 import Header from './HeaderComponent';
 import Navigation from './NavigationComponent';
 import Footer from './FooterComponent';
+import Product from './ProductComponent';
 
 class Main extends Component {
     render() {
@@ -11,6 +12,7 @@ class Main extends Component {
         <div>
             <Header />
             <Navigation />
+            <Product />
             <Footer />
         </div>
       );
