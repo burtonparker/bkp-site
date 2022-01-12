@@ -19,7 +19,7 @@ function Product(props) {
     const productDetail = () => props.products.map(product => {
         return (
             <div key={product.id} className="col-md-5 m-1">
-                {<RenderProduct product={product} />}
+                <RenderProduct />
             </div>
         );
     });
