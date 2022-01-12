@@ -6,9 +6,9 @@ function RenderProduct({ product }) {
 
     return (
         <Card>
-                <CardImg width="100%" src={product.image} alt={product.name} />
+                <CardImg width="100%" src={product.image} alt={product.description} />
                 <CardImgOverlay>
-                    <CardTitle>{product.name}</CardTitle>
+                    <CardTitle>{product.description}</CardTitle>
                 </CardImgOverlay>
         </Card>
     );
