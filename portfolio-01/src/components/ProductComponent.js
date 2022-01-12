@@ -1,44 +1,37 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { PRODUCTS } from '../shared/products';
+import { Loading } from "./LoadingComponent";
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { render } from "react-dom";
 
-function RenderProduct({ product }) {   
-
+function RenderProduct({ product }) {
     return (
         <Card>
-                <CardImg width="100%" src={product.image} alt={product.description} />
+                <CardImg width="100%" src={product.image} alt={product.name} />
                 <CardImgOverlay>
-                    <CardTitle>{product.description}</CardTitle>
+                    <CardTitle>{product.name}</CardTitle>
                 </CardImgOverlay>
         </Card>
     );
 }
 
 function Product(props) {
-
+    const [products] = useState([]);
     const productDetail = props.products.map(product => {
         return (
             <div key={product.id} className="col-md-5 m-1">
-                <RenderProduct />
+                <RenderProduct product={product} />
             </div>
         );
     });
 
         return (
-            <React.Fragment>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-8 bg-primary">
-                            <h1>Product Title</h1>
-                        </div>
-                        <div className="col-4 bg-secondary">
-                            <h4>Product Details</h4>
-                            <p>{productDetail}</p>
-                        </div>
-                    </div>
+            <div className="container">
+                <div className="row">
+                    {productDetail}
                 </div>
-            </React.Fragment>
-        )
+            </div>
+        );
 }
 
 export default Product;
