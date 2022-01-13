@@ -11,12 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
-/* sticky footer, so many ways to do this, which one is the least broken */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}

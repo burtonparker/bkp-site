@@ -6,10 +6,7 @@ import { render } from "react-dom";
 function RenderProduct({ product }) {
     return (
         <Card>
-                <CardImg width="100%" src={product.image} alt={product.name} />
-                <CardImgOverlay>
-                    <CardTitle>{product.description}</CardTitle>
-                </CardImgOverlay>
+            <CardImg width="100%" src={product.image} alt={product.name} />
         </Card>
     );
 }
@@ -20,17 +17,18 @@ function Product(props) {
         return (
             <React.Fragment>
             <div key={product.id} className="col-8">
-                <h1>{product.name}</h1>
+                <RenderProduct product={product} />
             </div>
             <div key={product.id} className="col-4">
-                <RenderProduct product={product} />
+                <h1>{product.name}</h1>
+                <p>{product.description}</p>
             </div>
             </React.Fragment>
         );
     });
 
         return (
-            <div className="container">
+            <div className="container mt-3">
                 <div className="row">
                     {productDetail}
                 </div>
