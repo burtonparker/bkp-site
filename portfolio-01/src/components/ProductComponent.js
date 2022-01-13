@@ -20,7 +20,8 @@ function Product(props) {
             <React.Fragment>
             <div key={product.id} className="col-md-4 order-2 order-md-1">
                 <h1>{product.name}</h1>
-                <p>{product.description}</p>
+                <hr></hr>
+                <p className="text-justify">{product.description}</p>
                 <h3>Skills</h3>
                     <ul class="list-inline">
                         {props.skills.map((skills) => {
