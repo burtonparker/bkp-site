@@ -5,6 +5,7 @@ import { SKILLS } from '../shared/skills';
 import { Router, Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { resetWarningCache } from 'prop-types';
 import Header from './HeaderComponent';
+import About from './AboutComponent';
 import Navigation from './NavigationComponent';
 import Footer from './FooterComponent';
 import Product from './ProductComponent';
@@ -31,7 +32,13 @@ class Main extends Component {
         <div>
             <Header />
             <Navigation />
-            <Product products={this.state.products} awards={this.state.awards} skills={this.state.skills}/>
+            <Switch>
+              <Route exact path='/home' render={() => <Product products={this.state.products} awards={this.state.awards} skills={this.state.skills}/>} />
+              <Route path='/work' />
+              <Route exact path="/about" render={() => <About />} />
+              <Route path='/contact' />
+              <Redirect to='/home' />
+            </Switch>
             <Footer />
         </div>
       );

@@ -35,12 +35,6 @@ class Navigation extends Component {
                             </Nav>
                     </div>
                 </Navbar>
-                    <Switch>
-                        <Route path='/home'  />
-                        <Route path='/work' />
-                        <Route exact path="/about" render={() => <About />} />
-                        <Route path='/contact' />
-                    </Switch>
             </React.Fragment>
         );
     };
