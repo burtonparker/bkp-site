@@ -13,6 +13,6 @@ export const AWARDS = [
     },
     {
         id: 3,
-        text: "2020 Kansas SBDC Small Business Award"
+        text: "2021 Kansas SBDC E3 Small Business Award"
     }
 ];

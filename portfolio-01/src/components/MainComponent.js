@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PRODUCTS } from '../shared/products';
 import { AWARDS } from '../shared/awards';
+import { SKILLS } from '../shared/skills';
 import { Router, Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { resetWarningCache } from 'prop-types';
 import Header from './HeaderComponent';
@@ -18,7 +19,8 @@ class Main extends Component {
     super(props);
     this.state = {
         products: PRODUCTS,
-        awards: AWARDS
+        awards: AWARDS,
+        skills: SKILLS
     };
 }
 
@@ -29,7 +31,7 @@ class Main extends Component {
         <div>
             <Header />
             <Navigation />
-            <Product products={this.state.products} awards={this.state.awards}/>
+            <Product products={this.state.products} awards={this.state.awards} skills={this.state.skills}/>
             <Footer />
         </div>
       );
