@@ -22,8 +22,8 @@ function Product(props) {
                 <h1>{product.name}</h1>
                 <hr></hr>
                 <p className="text-justify">{product.description}</p>
-                <h3>Skills</h3>
-                    <ul class="list-inline">
+                <h3><i className="fa fa-certificate" /> Skills</h3>
+                    <ul className="list-inline">
                         {props.skills.map((skills) => {
                             return (
                         <li key={skills} className="list-inline-item">{skills.text}</li>
