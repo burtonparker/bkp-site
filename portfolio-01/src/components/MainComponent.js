@@ -20,12 +20,14 @@ class Main extends Component {
     };
 }
 
+// be sure to pass state in JSX as Main is the parent to Product, etc.
+
     render() {
       return (
         <div>
             <Header />
             <Navigation />
-            <Product />
+            <Product products={this.state.products}/>
             <Footer />
         </div>
       );
