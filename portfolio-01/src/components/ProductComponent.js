@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Loading } from "./LoadingComponent";
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { render } from "react-dom";
+import { AWARDS } from "../shared/awards";
 
 function RenderProduct({ product }) {
     return (
@@ -22,8 +23,16 @@ function Product(props) {
             <div key={product.id} className="col-md-4">
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
+                    <select className="custom-select">
+                        <option value="">Awards &amp; Honors</option>
+                        {props.awards.map((awards) => {
+                            return (
+                        <option key={awards}>{awards.text}</option>
+                            );
+                        })}
+                    </select>
                 <div>
-                    <button className="btn btn-lg btn-primary">ADD TO COMPANY</button>
+                    <button className="btn btn-lg btn-primary mt-3">ADD TO COMPANY</button>
                 </div>
             </div>
             </React.Fragment>
