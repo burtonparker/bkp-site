@@ -19,11 +19,11 @@ function Product(props) {
         return (
             <React.Fragment>
             <div key={product.id} className="col-md-4 order-2 order-md-1">
-                <h1>{product.name}</h1>
+                <h1 className="text-center">{product.name}</h1>
                 <hr></hr>
                 <p className="text-justify">{product.description}</p>
-                <h3><i className="fa fa-certificate text-warning" /> Skills</h3>
-                    <ul className="list-inline">
+                <h3 className="text-center"><i className="fa fa-certificate text-warning" /> Skills</h3>
+                    <ul className="list-inline text-center">
                         {props.skills.map((skills) => {
                             return (
                         <li key={skills.id} className="list-inline-item">{skills.text}</li>
@@ -49,7 +49,7 @@ function Product(props) {
                                 <div></div>
                             );
                     })}
-                <div>
+                <div className="text-center">
                     <button className="btn btn-lg btn-primary mt-3">ADD TO COMPANY</button>
                 </div>
             </div>
