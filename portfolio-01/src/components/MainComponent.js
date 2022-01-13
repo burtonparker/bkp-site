@@ -27,7 +27,7 @@ class Main extends Component {
         <div>
             <Header />
             <Navigation />
-            <Product products={this.state.products}/>
+            <Product products={this.state.products} attributes={this.state.products.attributes}/>
             <Footer />
         </div>
       );
