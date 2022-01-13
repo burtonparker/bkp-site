@@ -9,6 +9,8 @@ import About from './AboutComponent';
 import Navigation from './NavigationComponent';
 import Footer from './FooterComponent';
 import Product from './ProductComponent';
+import Work from './WorkComponent';
+import Contact from './ContactComponent';
 
 // tweaks to orig main component
 
@@ -34,9 +36,9 @@ class Main extends Component {
             <Navigation />
             <Switch>
               <Route exact path='/home' render={() => <Product products={this.state.products} awards={this.state.awards} skills={this.state.skills}/>} />
-              <Route path='/work' />
+              <Route exact path='/work' render={() => <Work />} />
               <Route exact path="/about" render={() => <About />} />
-              <Route path='/contact' />
+              <Route exact path='/contact' render={() => <Contact />} />
               <Redirect to='/home' />
             </Switch>
             <Footer />
