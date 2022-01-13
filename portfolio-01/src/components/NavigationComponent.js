@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, 
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import About from './AboutComponent';
 import { NavLink } from 'react-router-dom';
 
 class Navigation extends Component {
@@ -37,7 +38,7 @@ class Navigation extends Component {
                     <Switch>
                         <Route path='/home'  />
                         <Route path='/work' />
-                        <Route path='/about' />
+                        <Route exact path="/about" render={() => <About />} />
                         <Route path='/contact' />
                     </Switch>
             </React.Fragment>
