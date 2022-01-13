@@ -17,9 +17,6 @@ function Product(props) {
     const productDetail = props.products.map(product => {
         return (
             <React.Fragment>
-            <div key={product.id} className="col-md-8">
-                <RenderProduct product={product} />
-            </div>
             <div key={product.id} className="col-md-4">
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
@@ -31,9 +28,23 @@ function Product(props) {
                             );
                         })}
                     </select>
+                    {props.products.map(product => {
+                        if (product.inventory <= 1)
+                            return (
+                                <small key={product.id} className="text-muted font-italic">
+                                    Hurry! There's only {product.inventory} {product.name.split(' ').slice(0, -1)} left in stock!
+                                </small>
+                            );
+                            return (
+                                <div></div>
+                            );
+                    })}
                 <div>
                     <button className="btn btn-lg btn-primary mt-3">ADD TO COMPANY</button>
                 </div>
+            </div>
+            <div key={product.id} className="col-md-8">
+                <RenderProduct product={product} />
             </div>
             </React.Fragment>
         );
