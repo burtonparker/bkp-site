@@ -12,7 +12,7 @@ function RenderProduct({ product }) {
 }
 
 function Product(props) {
-    //const [products] = useState([]);
+    
     const productDetail = props.products.map(product => {
         return (
             <React.Fragment>
