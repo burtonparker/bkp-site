@@ -16,12 +16,15 @@ function Product(props) {
     const productDetail = props.products.map(product => {
         return (
             <React.Fragment>
-            <div key={product.id} className="col-8">
+            <div key={product.id} className="col-md-8">
                 <RenderProduct product={product} />
             </div>
-            <div key={product.id} className="col-4">
+            <div key={product.id} className="col-md-4">
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
+                <div>
+                    <button className="btn btn-lg btn-primary">ADD TO COMPANY</button>
+                </div>
             </div>
             </React.Fragment>
         );
