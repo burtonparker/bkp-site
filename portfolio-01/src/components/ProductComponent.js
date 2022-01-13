@@ -26,7 +26,7 @@ function Product(props) {
                     <ul className="list-inline">
                         {props.skills.map((skills) => {
                             return (
-                        <li key={skills} className="list-inline-item">{skills.text}</li>
+                        <li key={skills.id} className="list-inline-item">{skills.text}</li>
                             );
                         })}
                     </ul>
@@ -34,7 +34,7 @@ function Product(props) {
                         <option value="">Awards &amp; Honors</option>
                         {props.awards.map((awards) => {
                             return (
-                        <option key={awards}>{awards.text}</option>
+                        <option key={awards.id}>{awards.text}</option>
                             );
                         })}
                     </select>
