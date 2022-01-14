@@ -53,5 +53,10 @@ export const SKILLS = [
         id: 10,
         color: "#607d8a",
         text: " Microsoft/Google/Apple Business Suites"
+    },
+    {
+        id: 11,
+        color: "#00ff01",
+        text: " I Can Also Juggle"
     }
 ];
