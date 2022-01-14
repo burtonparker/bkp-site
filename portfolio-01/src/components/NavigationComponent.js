@@ -6,10 +6,29 @@ import About from './AboutComponent';
 import { NavLink } from 'react-router-dom';
 
 class Navigation extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isNavOpen: false
+        };
+
+        this.toggleNav = this.toggleNav.bind(this);
+    }
+
+    toggleNav() {
+        this.setState({
+            isNavOpen: !this.state.isNavOpen
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
                 <Navbar light className="bg-light" sticky="top" expand="md">
+                <NavbarToggler onClick={this.toggleNav} />
+                    <Collapse isOpen={this.state.isNavOpen} navbar>
                     <div className="container justify-content-center">
                             <Nav navbar>
                                 <NavItem>
@@ -34,6 +53,7 @@ class Navigation extends Component {
                                 </NavItem>
                             </Nav>
                     </div>
+                    </Collapse>
                 </Navbar>
             </React.Fragment>
         );
