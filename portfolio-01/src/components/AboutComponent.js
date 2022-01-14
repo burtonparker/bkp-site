@@ -11,7 +11,7 @@ class About extends Component {
                                 <Card>
                                     <CardImg width="100%" img src="../assets/images/burton-karas-parker-about.jpg" alt="Burton Karas Parker" />
                                 </Card>
-                                <cite>Shortly before being screamed at by a toddler.</cite>
+                                <cite>Hair by Supercuts.</cite>
                         </div>
                         <div className="col-md-8">
                             <h1>About Me</h1>
