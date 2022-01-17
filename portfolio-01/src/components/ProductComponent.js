@@ -22,7 +22,7 @@ function RenderCart({ addProduct }) {
 }
 
 class Cart extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -42,6 +42,8 @@ class Cart extends Component {
         });
     }
 }
+
+
 
 function Product(props) {
 
