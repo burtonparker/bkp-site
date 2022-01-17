@@ -13,6 +13,36 @@ function RenderProduct({ product }) {
     );
 }
 
+function RenderCart({ addProduct }) {
+    return (
+        <div className="col-md-4">
+            <Cart addProduct={addProduct} />
+        </div>
+    );
+}
+
+class Cart extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            award: ''
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
+    }
+
+    handleSubmit(values) {
+        this.props.addProduct(values.award);
+    }
+
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+        });
+    }
+}
+
 function Product(props) {
 
     const productDetail = props.products.map(product => {
