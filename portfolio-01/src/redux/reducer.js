@@ -1,3 +1,5 @@
+// deprecated, no longer in use, delete.
+
 import { PRODUCTS } from '../shared/products';
 import { SKILLS } from '../shared/skills';
 import { AWARDS } from '../shared/awards';
