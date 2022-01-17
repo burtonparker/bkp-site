@@ -3,6 +3,7 @@ import { PRODUCTS } from '../shared/products';
 import { AWARDS } from '../shared/awards';
 import { SKILLS } from '../shared/skills';
 import { Router, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { resetWarningCache } from 'prop-types';
 import Header from './HeaderComponent';
 import About from './AboutComponent';
@@ -16,16 +17,15 @@ import Contact from './ContactComponent';
 
 // end sandbox
 
-class Main extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-        products: PRODUCTS,
-        awards: AWARDS,
-        skills: SKILLS
-    };
+const mapStateToProps = state => {
+  return {
+      products: state.products,
+      skills: state.skills,
+      awards: state.awards
+  }
 }
+
+class Main extends Component {
 
 // be sure to pass state in JSX as Main is the parent to Product, etc.
 
@@ -35,7 +35,7 @@ class Main extends Component {
             <Header />
             <Navigation />
             <Switch>
-              <Route exact path='/home' render={() => <Product products={this.state.products} awards={this.state.awards} skills={this.state.skills}/>} />
+              <Route exact path='/home' render={() => <Product products={this.props.products} awards={this.props.awards} skills={this.props.skills}/>} />
               <Route exact path='/work' render={() => <Work />} />
               <Route exact path="/about" render={() => <About />} />
               <Route exact path='/contact' render={() => <Contact />} />
@@ -47,4 +47,4 @@ class Main extends Component {
     };
   }
 
-export default Main;
+  export default withRouter(connect(mapStateToProps)(Main));
