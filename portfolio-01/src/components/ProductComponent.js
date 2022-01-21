@@ -58,7 +58,7 @@ function Product(props) {
                     <ul className="list-inline text-center">
                         {props.skills.map((skills) => {
                             return (
-                        <li key={skills.id} className="list-inline-item"><i class="fa fa-check-circle" style={{color: (skills.color)}} /> {skills.text}</li>
+                        <li key={skills.id} className="list-inline-item"><i className="fa fa-check-circle" style={{color: (skills.color)}} /> {skills.text}</li>
                             );
                         })}
                     </ul>
