@@ -4,6 +4,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } 
 import { render } from "react-dom";
 import { AWARDS } from "../shared/awards";
 import { Random, Fade } from 'react-animation-components';
+import { Control, LocalForm, Errors } from 'react-redux-form';
 
 function RenderProduct({ product }) {
     return (
@@ -33,7 +34,8 @@ class Cart extends Component {
     }
 
     handleSubmit(values) {
-        this.props.addProduct(values.award);
+        console.log("Current state is: " + JSON.stringify(values));
+        alert("Current state is: " + JSON.stringify(values));
     }
 
     toggleModal() {
@@ -82,7 +84,7 @@ function Product(props) {
                             );
                     })}
                 <div className="text-center">
-                    <button className="btn btn-lg btn-primary mt-3">ADD TO COMPANY</button>
+                    <button type="submit" className="btn btn-lg btn-primary mt-3">ADD TO COMPANY</button>
                 </div>
             </div>
             <div key={product.id} className="col-md-8 order-1 order-md-2">
