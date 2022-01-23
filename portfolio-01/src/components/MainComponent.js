@@ -12,8 +12,13 @@ import Footer from './FooterComponent';
 import Product from './ProductComponent';
 import Work from './WorkComponent';
 import Contact from './ContactComponent';
+import { addAwards } from '../redux/ActionCreators';
 
 // tweaks to orig main component
+
+const mapDispatchToProps = {
+  addAwards: (id, text) => (addAwards(id, text))
+};
 
 // end sandbox
 
@@ -47,4 +52,4 @@ class Main extends Component {
     };
   }
 
-  export default withRouter(connect(mapStateToProps)(Main));
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

@@ -1,6 +1,6 @@
-export const ADD_PRODUCTS = 'ADD_PRODUCTS';
-export const PRODUCTS_LOADING = 'PRODUCTS_LOADING';
-export const PRODUCTS_FAILED = 'PRODUCTS_FAILED';
+export const ADD_AWARDS = 'ADD_AWARDS';
+export const AWARDS_LOADING = 'AWARDS_LOADING';
+export const AWARDS_FAILED = 'AWARDS_FAILED';
 
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const ADD_COMMENTS = 'ADD_COMMENTS';
