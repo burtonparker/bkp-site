@@ -14,10 +14,10 @@ function RenderProduct({ product }) {
     );
 }
 
-function RenderCart({ addProduct }) {
+function RenderCart({ addAwards }) {
     return (
         <div className="col-md-4">
-            <Cart addProduct={addProduct} />
+            <Cart addAwards={addAwards} />
         </div>
     );
 }
