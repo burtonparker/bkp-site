@@ -14,15 +14,15 @@ function RenderProduct({ product }) {
     );
 }
 
-function RenderCart({ addAwards }) {
+/* function RenderCart({ addAwards }) {
     return (
         <div className="col-md-4">
             <Cart addAwards={addAwards} />
         </div>
     );
-}
+} */
 
-class Cart extends Component {
+class Product extends Component {
 
     constructor(props) {
         super(props);
@@ -43,13 +43,13 @@ class Cart extends Component {
             isModalOpen: !this.state.isModalOpen
         });
     }
-}
+// }
 
 
 
-function Product(props) {
-
-    const productDetail = props.products.map(product => {
+// function Product(props) {
+    render() {
+    const productDetail = this.props.products.map(product => {
         return (
             <React.Fragment>
             <div key={product.id} className="col-md-4 order-2 order-md-1">
@@ -58,7 +58,7 @@ function Product(props) {
                 <p className="text-justify">{product.description}</p>
                 <h3 className="text-center"><i className="fa fa-certificate text-warning" /> Skills</h3>
                     <ul className="list-inline text-center">
-                        {props.skills.map((skills) => {
+                        {this.props.skills.map((skills) => {
                             return (
                         <li key={skills.id} className="list-inline-item"><i className="fa fa-check-circle" style={{color: (skills.color)}} /> {skills.text}</li>
                             );
@@ -66,13 +66,13 @@ function Product(props) {
                     </ul>
                     <select className="custom-select">
                         <option value="">Awards &amp; Honors</option>
-                        {props.awards.map((awards) => {
+                        {this.props.awards.map((awards) => {
                             return (
                         <option key={awards.id}>{awards.text}</option>
                             );
                         })}
                     </select>
-                    {props.products.map(product => {
+                    {this.props.products.map(product => {
                         if (product.inventory <= 1)
                             return (
                                 <small key={product.id} className="text-muted font-italic">
@@ -84,7 +84,7 @@ function Product(props) {
                             );
                     })}
                 <div className="text-center">
-                    <button type="submit" className="btn btn-lg btn-primary mt-3">ADD TO COMPANY</button>
+                    <button type="submit" className="btn btn-lg btn-primary mt-3" >ADD TO COMPANY</button>
                 </div>
             </div>
             <div key={product.id} className="col-md-8 order-1 order-md-2">
@@ -101,6 +101,7 @@ function Product(props) {
                 </div>
             </div>
         );
+    }
 }
 
 export default Product;
