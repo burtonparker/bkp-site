@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Loading } from "./LoadingComponent";
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 import { render } from "react-dom";
 import { AWARDS } from "../shared/awards";
 import { Random, Fade } from 'react-animation-components';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Control, LocalForm, Errors, Form } from 'react-redux-form';
 
 function RenderProduct({ product }) {
     return (
@@ -84,7 +84,7 @@ class Product extends Component {
                             );
                     })}
                 <div className="text-center">
-                    <button type="submit" className="btn btn-lg btn-primary mt-3" >ADD TO COMPANY</button>
+                    <button type="submit" className="btn btn-lg btn-primary mt-3" onClick={() => this.handleSubmit('Hello World')}>ADD TO COMPANY</button>
                 </div>
             </div>
             <div key={product.id} className="col-md-8 order-1 order-md-2">
