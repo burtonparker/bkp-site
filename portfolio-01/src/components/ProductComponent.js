@@ -30,12 +30,17 @@ class Product extends Component {
             award: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateOption = this.updateOption.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
     }
 
     handleSubmit(values) {
         console.log("Current state is: " + JSON.stringify(values));
         alert("Current state is: " + JSON.stringify(values));
+    }
+
+    updateOption(event){
+        this.setState({award: event.target.value})
     }
 
     toggleModal() {
@@ -64,11 +69,11 @@ class Product extends Component {
                             );
                         })}
                     </ul>
-                    <select className="custom-select">
-                        <option value="">Awards &amp; Honors</option>
+                    <select className="custom-select" onChange={this.updateOption}>
+                        <option>Awards &amp; Honors</option>
                         {this.props.awards.map((awards) => {
                             return (
-                        <option key={awards.id}>{awards.text}</option>
+                        <option key={awards.id} value={awards.text}>{awards.text}</option>
                             );
                         })}
                     </select>
@@ -84,7 +89,7 @@ class Product extends Component {
                             );
                     })}
                 <div className="text-center">
-                    <button type="submit" className="btn btn-lg btn-primary mt-3" onClick={() => this.handleSubmit('Hello World')}>ADD TO COMPANY</button>
+                    <button type="submit" className="btn btn-lg btn-primary mt-3" onClick={() => this.handleSubmit(this.state.award)}>ADD TO COMPANY</button>
                 </div>
             </div>
             <div key={product.id} className="col-md-8 order-1 order-md-2">
