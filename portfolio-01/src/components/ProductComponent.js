@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Loading } from "./LoadingComponent";
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalBody, ModalHeader } from 'reactstrap';
 import { render } from "react-dom";
 import { AWARDS } from "../shared/awards";
 import { Random, Fade } from 'react-animation-components';
@@ -36,7 +36,7 @@ class Product extends Component {
 
     handleSubmit(values) {
         console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
+        // alert("Current state is: " + JSON.stringify(values));
     }
 
     updateOption(event){
@@ -89,12 +89,20 @@ class Product extends Component {
                             );
                     })}
                 <div className="text-center">
-                    <button type="submit" className="btn btn-lg btn-primary mt-3" onClick={() => this.handleSubmit(this.state.award)}>ADD TO COMPANY</button>
+                    <button type="submit" className="btn btn-lg btn-primary mt-3" onClick={() => {
+                        this.handleSubmit(this.state.award);
+                        this.toggleModal();
+                        }}>ADD TO COMPANY</button>
                 </div>
             </div>
             <div key={product.id} className="col-md-8 order-1 order-md-2">
                 <RenderProduct product={product} />
             </div>
+            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>Your Cart</ModalHeader>
+                    <ModalBody>{this.state.award}
+                    </ModalBody>
+                </Modal>
             </React.Fragment>
         );
     });
