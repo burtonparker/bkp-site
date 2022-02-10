@@ -32,22 +32,22 @@ class Navigation extends Component {
                     <div className="container justify-content-center">
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink onClick={this.toggleNav} className="nav-link link-secondary" to="/home">
+                                    <NavLink onClick={this.state.isNavOpen ? this.toggleNav : null} className="nav-link link-secondary" to="/home">
                                         <i className="fa fa-home fa-lg" /> Home
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink onClick={this.toggleNav} className="nav-link link-secondary" to="/work">
+                                    <NavLink onClick={this.state.isNavOpen ? this.toggleNav : null} className="nav-link link-secondary" to="/work">
                                         <i className="fa fa-list fa-lg" /> My Work
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink onClick={this.toggleNav} className="nav-link link-secondary" to="/about">
+                                    <NavLink onClick={this.state.isNavOpen ? this.toggleNav : null} className="nav-link link-secondary" to="/about">
                                         <i className="fa fa-info fa-lg" /> About
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink onClick={this.toggleNav} className="nav-link link-secondary" to="/contact">
+                                    <NavLink onClick={this.state.isNavOpen ? this.toggleNav : null} className="nav-link link-secondary" to="/contact">
                                         <i className="fa fa-address-card fa-lg" /> Contact Me
                                     </NavLink>
                                 </NavItem>

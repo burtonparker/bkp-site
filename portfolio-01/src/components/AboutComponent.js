@@ -9,7 +9,7 @@ class About extends Component {
                     <div className="row">
                         <div className="col-md-4">
                                 <Card>
-                                    <CardImg width="100%" img src="../assets/images/burton-karas-parker-about.jpg" alt="Burton Karas Parker" />
+                                    <CardImg width="100%" img src="../assets/images/burton-karas-parker-about.jpg" alt="Burton Karas Parker" title="Burton Parker" />
                                 </Card>
                                 <cite>Hair by Supercuts.</cite>
                         </div>
@@ -19,7 +19,7 @@ class About extends Component {
                             Born in Oregon, raised in Kansas, happily married father of four. I enjoy writing and performing music, art, photography, and cheeseburgers. I am a loyal, consistent, and hard worker who loves challenges and learning new systems and finding ways to make them better.
                             </p>
                             <p>
-                            Previously I was the Co-Founder and Co-Owner of Blue Collar Press &amp; Merchtable, a combined merchandising &amp; e-commerce fulfillment company, and screen printing facility where I oversaw operations during 18+ years.
+                            Previously I was the Co-Founder and Co-Owner of Merchtable &amp; Blue Collar Press, a combined merchandising &amp; e-commerce fulfillment company, and screen printing facility where I oversaw operations during 19 years.
                             </p>
                             <h3>Experience</h3>
                             <ul>

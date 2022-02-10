@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Loading } from "./LoadingComponent";
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardSubtitle, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalBody, ModalHeader, Table } from 'reactstrap';
 import { render } from "react-dom";
 import { AWARDS } from "../shared/awards";
 import { Random, Fade } from 'react-animation-components';
@@ -12,6 +12,18 @@ function RenderProduct({ product }) {
             <CardImg width="100%" src={product.image} alt={product.name} />
         </Card>
     );
+}
+
+function RenderCart({ product }) {
+    return (
+        <Card>
+            <CardBody>
+            <CardImg top width="100%" src={product.secondaryImage} alt={product.name} />
+            <CardTitle>{product.subtitle}</CardTitle>
+            <CardText></CardText>
+            </CardBody>
+        </Card>
+    )
 }
 
 /* function RenderCart({ addAwards }) {
@@ -100,7 +112,9 @@ class Product extends Component {
             </div>
             <Modal centered='true' isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Your Cart</ModalHeader>
-                    <ModalBody>{this.state.award}
+                    <ModalBody>
+                        <RenderCart product={product} />
+                        {this.state.award}
                     </ModalBody>
                 </Modal>
             </React.Fragment>
