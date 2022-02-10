@@ -98,7 +98,7 @@ class Product extends Component {
             <div key={product.id} className="col-md-8 order-1 order-md-2">
                 <RenderProduct product={product} />
             </div>
-            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+            <Modal centered='true' isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Your Cart</ModalHeader>
                     <ModalBody>{this.state.award}
                     </ModalBody>
