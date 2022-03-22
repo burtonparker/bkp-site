@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/burtonparker/bkp-site.git/static/css/main.82f26f52.css",
-    "main.js": "/burtonparker/bkp-site.git/static/js/main.264814b4.js",
+    "main.js": "/burtonparker/bkp-site.git/static/js/main.7fcf5aad.js",
     "static/js/787.f1b21f18.chunk.js": "/burtonparker/bkp-site.git/static/js/787.f1b21f18.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/burtonparker/bkp-site.git/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/burtonparker/bkp-site.git/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -10,11 +10,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/burtonparker/bkp-site.git/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/burtonparker/bkp-site.git/index.html",
     "main.82f26f52.css.map": "/burtonparker/bkp-site.git/static/css/main.82f26f52.css.map",
-    "main.264814b4.js.map": "/burtonparker/bkp-site.git/static/js/main.264814b4.js.map",
+    "main.7fcf5aad.js.map": "/burtonparker/bkp-site.git/static/js/main.7fcf5aad.js.map",
     "787.f1b21f18.chunk.js.map": "/burtonparker/bkp-site.git/static/js/787.f1b21f18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82f26f52.css",
-    "static/js/main.264814b4.js"
+    "static/js/main.7fcf5aad.js"
   ]
 }
