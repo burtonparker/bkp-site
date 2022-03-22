@@ -9,7 +9,7 @@ import { Control, LocalForm, Errors, Form } from 'react-redux-form';
 function RenderProduct({ product }) {
     return (
         <Card>
-            <CardImg width="100%" src={product.image} alt={product.name} />
+            <CardImg width="100%" src={process.env.PUBLIC_URL + product.image} alt={product.name} />
         </Card>
     );
 }
@@ -18,7 +18,7 @@ function RenderCart({ product }) {
     return (
         <Card>
             <CardBody>
-            <CardImg top width="100%" src={product.secondaryImage} alt={product.name} />
+            <CardImg top width="100%" src={process.env.PUBLIC_URL + product.secondaryImage} alt={product.name} />
             <CardTitle>{product.subtitle}</CardTitle>
             <CardText></CardText>
             </CardBody>
