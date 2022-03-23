@@ -1,5 +1,6 @@
 {
   "name": "portfolio-01",
+  "homepage": "https://github.com/burtonparker/bkp-site.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
