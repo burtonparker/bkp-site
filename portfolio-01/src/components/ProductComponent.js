@@ -43,7 +43,8 @@ class Product extends Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateOption = this.updateOption.bind(this);
-        this.toggleModal = this.toggleModal.bind(this);
+        this.toggleModalCart = this.toggleModalCart.bind(this);
+        this.toggleModalGrinch = this.toggleModalGrinch.bind(this);
     }
 
     handleSubmit(values) {
@@ -55,9 +56,15 @@ class Product extends Component {
         this.setState({award: event.target.value})
     }
 
-    toggleModal() {
+    toggleModalCart() {
         this.setState({
-            isModalOpen: !this.state.isModalOpen
+            isCartModalOpen: !this.state.isCartModalOpen
+        });
+    }
+
+    toggleModalGrinch() {
+        this.setState({
+            isGrinchModalOpen: !this.state.isGrinchModalOpen
         });
     }
 // }
@@ -72,7 +79,11 @@ class Product extends Component {
             <div key={product.id} className="col-md-4 order-2 order-md-1">
                 <h1 className="text-center">{product.name}</h1>
                 <hr></hr>
-                <p className="text-justify">{product.description}</p>
+                <p className="text-justify">I am a resourceful full-stack developer, designer, and problem solver. Making systems work better is my specialty and I love to develop and grow new businesses. In 2017 <a href="#" 
+                        onClick={(event) => {
+                        this.toggleModalGrinch();
+                        event.preventDefault();
+                        }}>someone stole my Grinch inflatable</a> and I was on the news.</p>
                 <h3 className="text-center"><i className="fa fa-certificate text-warning" /> Skills</h3>
                     <ul className="list-inline text-center">
                         {this.props.skills.map((skills) => {
@@ -103,18 +114,23 @@ class Product extends Component {
                 <div className="text-center">
                     <button type="submit" className="btn btn-lg btn-primary mt-3" onClick={() => {
                         this.handleSubmit(this.state.award);
-                        this.toggleModal();
+                        this.toggleModalCart();
                         }}>ADD TO COMPANY</button>
                 </div>
             </div>
             <div key={product.id} className="col-md-8 order-1 order-md-2">
                 <RenderProduct product={product} />
             </div>
-            <Modal centered='true' isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>Your Cart</ModalHeader>
+                <Modal centered='true' isOpen={this.state.isCartModalOpen} toggle={this.toggleModalCart}>
+                    <ModalHeader toggle={this.toggleModalCart}>Your Cart</ModalHeader>
                     <ModalBody>
                         <RenderCart product={product} />
                         {this.state.award}
+                    </ModalBody>
+                </Modal>
+                <Modal centered='true' isOpen={this.state.isGrinchModalOpen} toggle={this.toggleModalGrinch}>
+                    <ModalBody>
+                    <img src="./assets/images/burton-karas-parker-stolen-grinch.jpg" alt="Burton Karas Parker - Portrait of a Victim" title="Breaking News - Grinch Stolen" />
                     </ModalBody>
                 </Modal>
             </React.Fragment>
