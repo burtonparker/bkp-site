@@ -130,7 +130,7 @@ class Product extends Component {
                 </Modal>
                 <Modal centered='true' isOpen={this.state.isGrinchModalOpen} toggle={this.toggleModalGrinch}>
                     <ModalBody>
-                    <img src="./assets/images/burton-karas-parker-stolen-grinch.jpg" alt="Burton Karas Parker - Portrait of a Victim" title="Breaking News - Grinch Stolen" />
+                    <img src="./assets/images/burton-karas-parker-stolen-grinch.jpg" width="100%" alt="Burton Karas Parker - Portrait of a Victim" title="Breaking News - Grinch Stolen" />
                     </ModalBody>
                 </Modal>
             </React.Fragment>
