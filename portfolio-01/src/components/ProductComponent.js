@@ -18,7 +18,7 @@ function RenderCart({ product }) {
     return (
         <Card>
             <CardBody>
-            <CardImg top width="100%" src={product.secondaryImage} alt={product.name} />
+            <CardImg top width="50%" src={product.secondaryImage} alt={product.name} />
             <CardTitle>{product.subtitle}</CardTitle>
             <CardText></CardText>
             </CardBody>
@@ -96,7 +96,7 @@ class Product extends Component {
                         <option>Awards &amp; Honors</option>
                         {this.props.awards.map((awards) => {
                             return (
-                        <option key={awards.id} value={awards.text}>{awards.text}</option>
+                        <option key={awards.id} value={awards.details}>{awards.text}</option>
                             );
                         })}
                     </select>
