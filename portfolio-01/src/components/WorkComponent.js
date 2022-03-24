@@ -70,26 +70,26 @@ class Work extends Component {
                         </Card>
                         <Card>
                             <CardImg
-                            alt="Card image cap"
-                            src="https://picsum.photos/318/180"
+                            alt="Jonah Ray"
+                            src="./assets/images/work-jonah-ray.jpg"
                             top
                             width="100%"
                             />
                             <CardBody>
                             <CardTitle tag="h5">
-                                Card title
+                                Jonah Ray
                             </CardTitle>
                             <CardSubtitle
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Card subtitle
+                                Typography • Illustration
                             </CardSubtitle>
                             <CardText>
-                                This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                When Jonah Ray became the new host of Mystery Science Theater 3000 it fulfilled a lifelong dream, which he documented in a series of photographs during their U.S. tour. We worked together to turn those pictures into a limited edition zine.
                             </CardText>
                             <Button>
-                                Button
+                                Learn More
                             </Button>
                             </CardBody>
                         </Card>
