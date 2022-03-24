@@ -222,8 +222,8 @@ class Work extends Component {
                         <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isJonahModalOpen} toggle={this.toggleModalJonah}>
                             <ModalHeader toggle={this.toggleModalJonah}>Making Zines With Jonah</ModalHeader>
                             <ModalBody>
-                                For this project, I had Jonah simply share an iPhoto album with me so I could quickly get access to all of his photographs. On the cover, I made a hand-drawn illustration of Jonah and then mixed in some paint and shape effects using my iPad. I used Adobe Typekit for the typography, my goal was to have something that felt ever so slightly worn, since this was in essence a tour diary. In order to keep the budget under control, I was able to source a print-on-demand book publisher out of Omaha, Nebraska, which allowed Jonah and I to only have to commit to small print runs, as the zine was initially only intended to be sold at comic cons.
-                                <PhotoAlbum layout="rows" photos={jonahPhotos} />
+                                For this project, I had Jonah simply share an iPhoto album with me so I could quickly get access to all of his photographs. On the cover, I made a hand-drawn illustration of Jonah and then mixed in some paint and shape effects using my iPad. I used Adobe Typekit for the typography, my goal was to have something that felt ever so slightly worn, since this was in essence a tour diary. In order to keep the budget under control, I was able to source a print-on-demand book publisher out of Omaha, Nebraska, which allowed Jonah and I to only have to commit to small print runs, as the zine was initially only intended to be sold at comic conventions.
+                                <PhotoAlbum layout="rows" targetRowHeight={350} photos={jonahPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
