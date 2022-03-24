@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Card, CardImg, CardGroup, CardBody, CardSubtitle, CardText, Button, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 class Work extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        };
+
+        this.toggleModalJonah = this.toggleModalJonah.bind(this);
+    }
+
+    toggleModalJonah() {
+        this.setState({
+            isJonahModalOpen: !this.state.isJonahModalOpen
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -38,7 +55,9 @@ class Work extends Component {
                             <CardText>
                                 When Jonah Ray became the new host of Mystery Science Theater 3000 it fulfilled a lifelong dream, which he documented in a series of photographs during their U.S. tour. We worked together to turn those pictures into a limited edition zine.
                             </CardText>
-                            <Button>
+                            <Button onClick={() => 
+                                this.toggleModalJonah()
+                            }>
                                 Learn More
                             </Button>
                             </CardBody>
@@ -172,6 +191,12 @@ class Work extends Component {
                             </CardBody>
                         </Card>
                         </CardGroup>
+                        <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isJonahModalOpen} toggle={this.toggleModalJonah}>
+                            <ModalHeader toggle={this.toggleModalJonah}>Your Cart</ModalHeader>
+                            <ModalBody>
+                                Content
+                            </ModalBody>
+                        </Modal>
                     </div>
                 </div>
             </React.Fragment>
