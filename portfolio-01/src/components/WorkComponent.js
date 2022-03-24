@@ -20,6 +20,31 @@ class Work extends Component {
                         <CardGroup>
                         <Card>
                             <CardImg
+                            alt="Jonah Ray"
+                            src="./assets/images/work-jonah-ray.jpg"
+                            top
+                            width="100%"
+                            />
+                            <CardBody>
+                            <CardTitle tag="h5">
+                                Jonah Ray
+                            </CardTitle>
+                            <CardSubtitle
+                                className="mb-2 text-muted"
+                                tag="h6"
+                            >
+                                Typography • Illustration
+                            </CardSubtitle>
+                            <CardText>
+                                When Jonah Ray became the new host of Mystery Science Theater 3000 it fulfilled a lifelong dream, which he documented in a series of photographs during their U.S. tour. We worked together to turn those pictures into a limited edition zine.
+                            </CardText>
+                            <Button>
+                                Learn More
+                            </Button>
+                            </CardBody>
+                        </Card>
+                        <Card>
+                            <CardImg
                             alt="Female Collective"
                             src="./assets/images/work-female-collective.jpg"
                             top
@@ -62,31 +87,6 @@ class Work extends Component {
                             </CardSubtitle>
                             <CardText>
                                 At Merchtable I owned all aspects of our software platfrom, from initial design, to managing the development team, designing new features, and even committing and deploying my own branches.
-                            </CardText>
-                            <Button>
-                                Learn More
-                            </Button>
-                            </CardBody>
-                        </Card>
-                        <Card>
-                            <CardImg
-                            alt="Jonah Ray"
-                            src="./assets/images/work-jonah-ray.jpg"
-                            top
-                            width="100%"
-                            />
-                            <CardBody>
-                            <CardTitle tag="h5">
-                                Jonah Ray
-                            </CardTitle>
-                            <CardSubtitle
-                                className="mb-2 text-muted"
-                                tag="h6"
-                            >
-                                Typography • Illustration
-                            </CardSubtitle>
-                            <CardText>
-                                When Jonah Ray became the new host of Mystery Science Theater 3000 it fulfilled a lifelong dream, which he documented in a series of photographs during their U.S. tour. We worked together to turn those pictures into a limited edition zine.
                             </CardText>
                             <Button>
                                 Learn More
