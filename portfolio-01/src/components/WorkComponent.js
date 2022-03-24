@@ -45,26 +45,26 @@ class Work extends Component {
                         </Card>
                         <Card>
                             <CardImg
-                            alt="Card image cap"
-                            src="https://picsum.photos/318/180"
+                            alt="Merchtable"
+                            src="./assets/images/work-female-collective.jpg"
                             top
                             width="100%"
                             />
                             <CardBody>
                             <CardTitle tag="h5">
-                                Card title
+                                Merchtable
                             </CardTitle>
                             <CardSubtitle
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Card subtitle
+                                Product Management • Web Design
                             </CardSubtitle>
                             <CardText>
-                                This card has supporting text below as a natural lead-in to additional content.
+                                At Merchtable I owned all aspects of our software platfrom, from initial design, to managing the development team, designing new features, and even committing and deploying my own branches.
                             </CardText>
                             <Button>
-                                Button
+                                Learn More
                             </Button>
                             </CardBody>
                         </Card>
