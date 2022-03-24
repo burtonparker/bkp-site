@@ -46,7 +46,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Merchtable"
-                            src="./assets/images/work-female-collective.jpg"
+                            src="./assets/images/work-merchtable.jpg"
                             top
                             width="100%"
                             />
