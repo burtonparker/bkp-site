@@ -1,6 +1,34 @@
 import React, { Component } from 'react';
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
-import { Card, CardImg, CardGroup, CardBody, CardSubtitle, CardText, Button, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardGroup, CardBody, CardSubtitle, CardText, Button, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import PhotoAlbum from 'react-photo-album';
+
+const jonahPhotos = [
+    {
+        src: "./assets/images/jonah-cover.jpg",
+        width: 1267,
+        height: 1920
+    },
+    {
+        src: "./assets/images/jonah-crow.jpg",
+        width: 1920,
+        height: 1920
+    },
+    {
+        src: "./assets/images/jonah-kansas-city.jpg",
+        width: 1920,
+        height: 1440
+    },
+    {
+        src: "./assets/images/jonah-papa-bear.jpg",
+        width: 1920,
+        height: 1440
+    },
+    {
+        src: "./assets/images/jonah-we-rolled.jpg",
+        width: 1920,
+        height: 1440
+    }
+];
 
 class Work extends Component {
 
@@ -192,9 +220,10 @@ class Work extends Component {
                         </Card>
                         </CardGroup>
                         <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isJonahModalOpen} toggle={this.toggleModalJonah}>
-                            <ModalHeader toggle={this.toggleModalJonah}>Your Cart</ModalHeader>
+                            <ModalHeader toggle={this.toggleModalJonah}>Making Zines With Jonah</ModalHeader>
                             <ModalBody>
-                                Content
+                                For this project, I had Jonah simply share an iPhoto album with me so I could quickly get access to all of his photographs. On the cover, I made a hand-drawn illustration of Jonah and then mixed in some paint and shape effects using my iPad. I used Adobe Typekit for the typography, my goal was to have something that felt ever so slightly worn, since this was in essence a tour diary. In order to keep the budget under control, I was able to source a print-on-demand book publisher out of Omaha, Nebraska, which allowed Jonah and I to only have to commit to small print runs, as the zine was initially only intended to be sold at comic cons.
+                                <PhotoAlbum layout="rows" photos={jonahPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
