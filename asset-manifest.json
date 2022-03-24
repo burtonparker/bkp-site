@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bkp-site/static/css/main.f16006f8.css",
+    "main.css": "/bkp-site/static/css/main.6e54a23e.css",
     "main.js": "/bkp-site/static/js/main.e6112088.js",
     "static/js/787.f1b21f18.chunk.js": "/bkp-site/static/js/787.f1b21f18.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/bkp-site/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -9,12 +9,12 @@
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/bkp-site/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/bkp-site/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/bkp-site/index.html",
-    "main.f16006f8.css.map": "/bkp-site/static/css/main.f16006f8.css.map",
+    "main.6e54a23e.css.map": "/bkp-site/static/css/main.6e54a23e.css.map",
     "main.e6112088.js.map": "/bkp-site/static/js/main.e6112088.js.map",
     "787.f1b21f18.chunk.js.map": "/bkp-site/static/js/787.f1b21f18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f16006f8.css",
+    "static/css/main.6e54a23e.css",
     "static/js/main.e6112088.js"
   ]
 }
