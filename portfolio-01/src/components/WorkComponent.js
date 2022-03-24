@@ -93,6 +93,8 @@ class Work extends Component {
                             </Button>
                             </CardBody>
                         </Card>
+                        </CardGroup>
+                        <CardGroup>
                         <Card>
                             <CardImg
                             alt="Kenyan Birth Certificate Generator"
