@@ -45,4 +45,5 @@ button {
 .modal-fullscreen .modal-content {
   border: none;
   border-radius: 0;
+  overflow: auto;
 }
