@@ -1,3 +1,7 @@
+@media screen and (max-width: 576px)  {
+  .mobile-break { display: none; }
+}
+
 body {
   font-family: "yorkten-slab-normal", serif;
   font-weight: 200;

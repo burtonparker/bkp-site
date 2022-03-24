@@ -94,32 +94,8 @@ class Work extends Component {
                             </CardBody>
                         </Card>
                         </CardGroup>
+                        <br class="mobile-break" />
                         <CardGroup>
-                        <Card>
-                            <CardImg
-                            alt="Kenyan Birth Certificate Generator"
-                            src="./assets/images/work-kenyan-birth-certificate-generator.jpg"
-                            top
-                            width="100%"
-                            />
-                            <CardBody>
-                            <CardTitle tag="h5">
-                                Kenyan Birth Certificate Generator
-                            </CardTitle>
-                            <CardSubtitle
-                                className="mb-2 text-muted"
-                                tag="h6"
-                            >
-                                Concept • Graphic Design
-                            </CardSubtitle>
-                            <CardText>
-                                About that time I accidentally went viral and made a bunch of people laugh (some people, not so much).
-                            </CardText>
-                            <Button>
-                                Learn More
-                            </Button>
-                            </CardBody>
-                        </Card>
                         <Card>
                             <CardImg
                             alt="Product Design"
@@ -164,6 +140,31 @@ class Work extends Component {
                             </CardSubtitle>
                             <CardText>
                                 When you ship 40,000 vinyl albums each year, it's <i>pretty</i> important that they arrive safe and sound, so I designed a custom vinyl mailer and had it produced locally, helping the environment, and the local economy.
+                            </CardText>
+                            <Button>
+                                Learn More
+                            </Button>
+                            </CardBody>
+                        </Card>
+                        <Card>
+                            <CardImg
+                            alt="Kenyan Birth Certificate Generator"
+                            src="./assets/images/work-kenyan-birth-certificate-generator.jpg"
+                            top
+                            width="100%"
+                            />
+                            <CardBody>
+                            <CardTitle tag="h5">
+                                Kenyan Birth Certificate Generator
+                            </CardTitle>
+                            <CardSubtitle
+                                className="mb-2 text-muted"
+                                tag="h6"
+                            >
+                                Concept • Graphic Design
+                            </CardSubtitle>
+                            <CardText>
+                                About that time I accidentally went viral and made a bunch of people laugh (some people, not so much).
                             </CardText>
                             <Button>
                                 Learn More
