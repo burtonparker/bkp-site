@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import { PRODUCTS } from '../shared/products';
-import { AWARDS } from '../shared/awards';
-import { SKILLS } from '../shared/skills';
-import { Router, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { resetWarningCache } from 'prop-types';
 import Header from './HeaderComponent';
 import About from './AboutComponent';
 import Navigation from './NavigationComponent';

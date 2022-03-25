@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import { Loading } from "./LoadingComponent";
-import { Card, CardImg, CardText, CardBody, CardSubtitle, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalBody, ModalHeader, Table } from 'reactstrap';
-import { render } from "react-dom";
-import { AWARDS } from "../shared/awards";
-import { Random, Fade } from 'react-animation-components';
-import { Control, LocalForm, Errors, Form } from 'react-redux-form';
+import { Card, CardImg, Button, Modal, ModalBody, ModalHeader, Table } from 'reactstrap';
 
 function RenderProduct({ product }) {
     return (
@@ -16,13 +11,45 @@ function RenderProduct({ product }) {
 
 function RenderCart({ product }) {
     return (
-        <Card>
-            <CardBody>
-            <CardImg top width="50%" src={product.secondaryImage} alt={product.name} />
-            <CardTitle>{product.subtitle}</CardTitle>
-            <CardText></CardText>
-            </CardBody>
-        </Card>
+        <React.Fragment>
+        <Table borderless>
+            <thead>
+                <tr>
+                <th>
+                    
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Price
+                </th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">
+                        <img src={product.secondaryImage} alt={product.name}></img>
+                    </th>
+                    <td>
+                        {product.subtitle}
+                    </td>
+                    <td>
+                        {product.inventory}
+                    </td>
+                    <td>
+                        {product.price}
+                    </td>
+                    </tr>
+                </tbody>
+            </Table>
+            <div className="text-right">
+                <Button color="success" onClick={() => window.location = 'mailto:burtonparker@gmail.com?subject=Hey Burton!&body=Let\'s work together!'}>CHECK OUT</Button>
+            </div>
+            </React.Fragment>
     )
 }
 
@@ -121,7 +148,7 @@ class Product extends Component {
             <div key={product.id} className="col-md-8 order-1 order-md-2">
                 <RenderProduct product={product} />
             </div>
-                <Modal centered='true' isOpen={this.state.isCartModalOpen} toggle={this.toggleModalCart}>
+                <Modal size="lg" centered='true' isOpen={this.state.isCartModalOpen} toggle={this.toggleModalCart}>
                     <ModalHeader toggle={this.toggleModalCart}>Your Cart</ModalHeader>
                     <ModalBody>
                         <RenderCart product={product} />
