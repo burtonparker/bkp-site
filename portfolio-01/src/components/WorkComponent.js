@@ -174,6 +174,24 @@ const vcPhotos = [
     }
 ];
 
+const vmPhotos = [
+    {
+        src: "./assets/images/vm-mailer-01.jpg",
+        width: 1920,
+        height: 998
+    },
+    {
+        src: "./assets/images/vm-mailer-02.jpg",
+        width: 1920,
+        height: 1920
+    },
+    {
+        src: "./assets/images/vm-mailer-03.jpg",
+        width: 1920,
+        height: 1920
+    }
+];
+
 class Work extends Component {
 
     constructor(props) {
@@ -372,9 +390,11 @@ class Work extends Component {
                                 <Badge bg="" style={{backgroundColor: '#f38ab4'}} pill>Packaging Design</Badge>
                             </CardSubtitle>
                             <CardText>
-                                When you ship 40,000 vinyl albums each year, it's <i>pretty</i> important that they arrive safe and sound, so I designed a custom vinyl mailer and had it produced locally, helping the environment, and the local economy.
+                                When you ship 40,000 vinyl albums each year, it's <i>pretty</i> important that they arrive safe and sound, so I worked with a local company to produce new packaging to protect our shipments, making our customers and clients both happy in the process.
                             </CardText>
-                            <Button>
+                            <Button onClick={() => 
+                                this.toggleModalVM()
+                            }>
                                 Learn More
                             </Button>
                             </CardBody>
@@ -437,6 +457,15 @@ class Work extends Component {
                                 
                                 <p>Some notable clients I've worked with include Diplo, Josh Ritter, Brandi Carlile, Wilco, JPEGMAFIA, Kill Rock Stars, Tennis, Mom + Pop Records, Cuco, Dillon Francis, Marc Maron, Bayonne, Tad, Fischerspooner, Joywave, Juliana Hatfield, Mike Birbiglia, Maria Bamford, MØ, OK GO, Petit Biscuit, Ruth E. Carter, REZZ, Sturgill Simpson, The Ringer, and ZEDD among many others.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={vcPhotos} />
+                            </ModalBody>
+                        </Modal>
+                        <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isVMModalOpen} toggle={this.toggleModalVM}>
+                            <ModalHeader toggle={this.toggleModalVM}>What Goes Into a Box?</ModalHeader>
+                            <ModalBody>
+                                <p>Part of owning a company involves listening - <i>really</i> listening - to criticism. As vinyl albums began to grow again in popularity, I was faced with a major problem in the form of damaged records arriving on customer's doorsteps. On top of that, the company we were using, Uline, was politically and morally incongruous to our beliefs and those of our clients. Lastly, packaging is wasteful, so what can be done to reduce that impact?</p>
+                                
+                                <p>I worked with a local packaging company on several initial prototypes. Some of them were very <i>very</i> weird, but eventually I settled on a design that adequately protected all corners of the album(s) in the shipment. To reduce waste, I had our logo die-cut from the center of the interior, which not only looked cool and expanded brand awareness, but had the effect of reducing the weight of every mailer by about 15% - that's a lot of carbon - especially considering the mailers now only had to travel across town instead of multiple states. All together this project had the effect of impacting the environment and local economy positively, while showing both clients and customers that their voices were indeed heard.</p>
+                                <PhotoAlbum layout="rows" targetRowHeight={350} photos={vmPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
