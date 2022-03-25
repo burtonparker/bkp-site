@@ -425,9 +425,11 @@ class Work extends Component {
                                 <Badge bg="" style={{backgroundColor: '#0084ff'}} pill>Concept</Badge> • <Badge bg="" style={{backgroundColor: '#e71a30'}} pill>Graphic Design</Badge>
                             </CardSubtitle>
                             <CardText>
-                                About that time I accidentally went viral and made a bunch of people laugh (some people, not so much).
+                                About that time my friend and I accidentally went viral and made a bunch of people laugh (some people, not so much).
                             </CardText>
-                            <Button>
+                            <Button onClick={() => 
+                                this.toggleModalKB()
+                            }>
                                 Learn More
                             </Button>
                             </CardBody>
