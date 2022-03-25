@@ -106,6 +106,74 @@ const mtPhotos = [
     }
 ];
 
+const vcPhotos = [
+    {
+        src: "./assets/images/various-deck-01.jpg",
+        width: 1920,
+        height: 1075
+    },
+    {
+        src: "./assets/images/various-deck-02.jpg",
+        width: 1920,
+        height: 1075
+    },
+    {
+        src: "./assets/images/various-deck-03.jpg",
+        width: 1080,
+        height: 1075
+    },
+    {
+        src: "./assets/images/various-deck-04.jpg",
+        width: 1080,
+        height: 1075
+    },
+    {
+        src: "./assets/images/various-ps-hoodie.jpg",
+        width: 2000,
+        height: 2000
+    },
+    {
+        src: "./assets/images/various-ps-tee.jpg",
+        width: 2500,
+        height: 1394
+    },
+    {
+        src: "./assets/images/various-ps-logo.jpg",
+        width: 1920,
+        height: 1920
+    },
+    {
+        src: "./assets/images/various-candle-01.jpg",
+        width: 1280,
+        height: 1280
+    },
+    {
+        src: "./assets/images/various-candle-02.jpg",
+        width: 1050,
+        height: 1050
+    },
+    {
+        src: "./assets/images/various-deck-cuco.jpg",
+        width: 1920,
+        height: 1065
+    },
+    {
+        src: "./assets/images/various-dillon-francis-bag.jpg",
+        width: 1920,
+        height: 1920
+    },
+    {
+        src: "./assets/images/various-gerald-stocking.jpg",
+        width: 1920,
+        height: 1920
+    },
+    {
+        src: "./assets/images/various-idgafos-pillow.jpg",
+        width: 1000,
+        height: 1000
+    }
+];
+
 class Work extends Component {
 
     constructor(props) {
@@ -117,6 +185,9 @@ class Work extends Component {
         this.toggleModalJonah = this.toggleModalJonah.bind(this);
         this.toggleModalFC = this.toggleModalFC.bind(this);
         this.toggleModalMT = this.toggleModalMT.bind(this);
+        this.toggleModalVC = this.toggleModalVC.bind(this);
+        this.toggleModalVM = this.toggleModalVM.bind(this);
+        this.toggleModalKB = this.toggleModalKB.bind(this);
     }
 
     toggleModalJonah() {
@@ -134,6 +205,24 @@ class Work extends Component {
     toggleModalMT() {
         this.setState({
             isMTModalOpen: !this.state.isMTModalOpen
+        });
+    }
+
+    toggleModalVC() {
+        this.setState({
+            isVCModalOpen: !this.state.isVCModalOpen
+        });
+    }
+
+    toggleModalVM() {
+        this.setState({
+            isVMModalOpen: !this.state.isVMModalOpen
+        });
+    }
+
+    toggleModalKB() {
+        this.setState({
+            isKBModalOpen: !this.state.isKBModalOpen
         });
     }
 
@@ -253,12 +342,14 @@ class Work extends Component {
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Product Design • Merchandising
+                                <Badge bg="" style={{backgroundColor: '#dea860'}} pill>Product Design</Badge> • <Badge bg="" style={{backgroundColor: '#704f6e'}} pill>Merchandising</Badge>
                             </CardSubtitle>
                             <CardText>
                                 In my role as merchandiser, I was responsible for designing products for hundreds of artists, comedians, and record labels over the years. Here's just a small sampling of that work.
                             </CardText>
-                            <Button>
+                            <Button onClick={() => 
+                                this.toggleModalVC()
+                            }>
                                 Learn More
                             </Button>
                             </CardBody>
@@ -278,7 +369,7 @@ class Work extends Component {
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Packaging Design
+                                <Badge bg="" style={{backgroundColor: '#f38ab4'}} pill>Packaging Design</Badge>
                             </CardSubtitle>
                             <CardText>
                                 When you ship 40,000 vinyl albums each year, it's <i>pretty</i> important that they arrive safe and sound, so I designed a custom vinyl mailer and had it produced locally, helping the environment, and the local economy.
@@ -303,7 +394,7 @@ class Work extends Component {
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Concept • Graphic Design
+                                <Badge bg="" style={{backgroundColor: '#0084ff'}} pill>Concept</Badge> • <Badge bg="" style={{backgroundColor: '#e71a30'}} pill>Graphic Design</Badge>
                             </CardSubtitle>
                             <CardText>
                                 About that time I accidentally went viral and made a bunch of people laugh (some people, not so much).
@@ -337,6 +428,13 @@ class Work extends Component {
 
                                 <p>Probably my favorite aspect is working on user interfaces. I designed Merchtable to have an extremely flexible front-end, so that each store on the platform to look and feel entirely unique. However for the back-end I had an entirely different challenge - make a single cohesive experience that could be used by staff to reliably and accurately process important data such as sales an inventory. Actually make that two back-ends, because I had to do it all over again when I designed the management portal, a service to be used by the artists and managers to analyze their data directly.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={mtPhotos} />
+                            </ModalBody>
+                        </Modal>
+                        <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isVCModalOpen} toggle={this.toggleModalVC}>
+                            <ModalHeader toggle={this.toggleModalVC}>Design is How it Works</ModalHeader>
+                            <ModalBody>
+                                <p>From my earliest days creating my high school band's cassette tape insert I've been a designer. When working with artists, I would sometimes be tasked with creating an identity from the ground up, but often times they would come with ready made creative assets but no clue how to merchandise them. My job would be to take those visuals, research trends, and come up with compelling new product concepts. This included everything from vendor sourcing - like a Polish candlemaker - to market analysis and even personally creating the final pitch deck for presentation. Below is some of my favorite work.</p>
+                                <PhotoAlbum layout="rows" targetRowHeight={350} photos={vcPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
