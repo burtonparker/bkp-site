@@ -36,7 +36,6 @@ function RenderCart({ product }) {
                         <ThumbnailBasic
                             src={product.secondaryImage} 
                             alt={product.name}
-                            size='large'
                         />
                     </th>
                     <td>
