@@ -265,9 +265,9 @@ class Work extends Component {
                             </ModalBody>
                         </Modal>
                         <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isFCModalOpen} toggle={this.toggleModalFC}>
-                            <ModalHeader toggle={this.toggleModalFC}>Making Zines With Jonah</ModalHeader>
+                            <ModalHeader toggle={this.toggleModalFC}>Words Matter</ModalHeader>
                             <ModalBody>
-                                <p>Female Collective was experiencing explosive growth from their viral Instagram posts and was looking to expand into select merchandise offerings. I was tasked with extending their visual language into a storefront. I designed the store layout itself in Liquid and SCSS, while integrating MailChimp into the header so we could encourage growth while following all the appropriate privacy best practices (aka, no forced opt-in!).</p>
+                                <p>Female Collective was experiencing explosive growth from their viral text-based Instagram posts and was looking to expand into select merchandise offerings. I was tasked with extending their visual language into a storefront. I designed the store layout itself in Liquid and SCSS, while integrating MailChimp into the header so we could encourage growth while following all the appropriate privacy best practices (aka, no forced opt-in!).</p>
 
                                 <p>A year after her successful launch, we turned the focus to expanding marketing. I worked with the Instagram Shopping team at Facebook to integrate direct product listings into the Female Collective Instagram feed. This allowed her followers to purchase directly from Instagram, without ever having to leave the app, all the while sending the sales data to our platform for fulfillment. Additionally I provided reporting on insights and the success of each campaign.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={fcPhotos} />
