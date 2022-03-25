@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardImg, CardGroup, CardBody, CardSubtitle, CardText, Button, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import PhotoAlbum from 'react-photo-album';
+import { Badge, Button, Card, CardBody, CardGroup, CardImg, CardSubtitle, CardText, CardTitle, Modal, ModalBody, ModalHeader } from 'reactstrap';
 
 const jonahPhotos = [
     {
@@ -119,12 +119,12 @@ const vcPhotos = [
     },
     {
         src: "./assets/images/various-deck-03.jpg",
-        width: 1080,
+        width: 1920,
         height: 1075
     },
     {
         src: "./assets/images/various-deck-04.jpg",
-        width: 1080,
+        width: 1920,
         height: 1075
     },
     {
@@ -138,7 +138,7 @@ const vcPhotos = [
         height: 1394
     },
     {
-        src: "./assets/images/various-ps-logo.jpg",
+        src: "./assets/images/various-ps-logos.jpg",
         width: 1920,
         height: 1920
     },
@@ -433,7 +433,9 @@ class Work extends Component {
                         <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isVCModalOpen} toggle={this.toggleModalVC}>
                             <ModalHeader toggle={this.toggleModalVC}>Design is How it Works</ModalHeader>
                             <ModalBody>
-                                <p>From my earliest days creating my high school band's cassette tape insert I've been a designer. When working with artists, I would sometimes be tasked with creating an identity from the ground up, but often times they would come with ready made creative assets but no clue how to merchandise them. My job would be to take those visuals, research trends, and come up with compelling new product concepts. This included everything from vendor sourcing - like a Polish candlemaker - to market analysis and even personally creating the final pitch deck for presentation. Below is some of my favorite work.</p>
+                                <p>From my earliest days creating my high school band's cassette tape insert I've been a designer. When working with artists, I would sometimes be tasked with creating an identity from the ground up, but often times they would come with ready made creative assets but no clue how to merchandise them. My job would be to take those visuals, research trends, and come up with compelling new product concepts. This included everything from vendor sourcing - like a Polish candlemaker - to market analysis and even personally creating the final pitch deck for presentation.</p>
+                                
+                                <p>Some notable clients I've worked with include Diplo, Josh Ritter, Brandi Carlile, Wilco, JPEGMAFIA, Kill Rock Stars, Tennis, Mom + Pop Records, Cuco, Dillon Francis, Marc Maron, Bayonne, Tad, Fischerspooner, Joywave, Juliana Hatfield, Mike Birbiglia, Maria Bamford, MØ, OK GO, Petit Biscuit, Ruth E. Carter, REZZ, Sturgill Simpson, The Ringer, and ZEDD among many others.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={vcPhotos} />
                             </ModalBody>
                         </Modal>
