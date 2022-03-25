@@ -58,6 +58,54 @@ const fcPhotos = [
     }
 ];
 
+const mtPhotos = [
+    {
+        src: "./assets/images/merchtable-stock-withdrawal.jpg",
+        width: 1920,
+        height: 819
+    },
+    {
+        src: "./assets/images/merchtable-royalty-report.jpg",
+        width: 1920,
+        height: 1196
+    },
+    {
+        src: "./assets/images/merchtable-regional-report.jpg",
+        width: 1920,
+        height: 1854
+    },
+    {
+        src: "./assets/images/merchtable-dashboard.jpg",
+        width: 1920,
+        height: 1281
+    },
+    {
+        src: "./assets/images/merchtable-petit-biscuit-front-page.jpg",
+        width: 619,
+        height: 1920
+    },
+    {
+        src: "./assets/images/merchtable-petit-biscuit-product-page.jpg",
+        width: 1246,
+        height: 2069
+    },
+    {
+        src: "./assets/images/merchtable-blazer.jpg",
+        width: 1920,
+        height: 1162
+    },
+    {
+        src: "./assets/images/merchtable-burton-parker-warehouse.jpg",
+        width: 1864,
+        height: 1242
+    },
+    {
+        src: "./assets/images/merchtable-burton-parker-office.jpg",
+        width: 1920,
+        height: 1280
+    }
+];
+
 class Work extends Component {
 
     constructor(props) {
@@ -68,6 +116,7 @@ class Work extends Component {
 
         this.toggleModalJonah = this.toggleModalJonah.bind(this);
         this.toggleModalFC = this.toggleModalFC.bind(this);
+        this.toggleModalMT = this.toggleModalMT.bind(this);
     }
 
     toggleModalJonah() {
@@ -79,6 +128,12 @@ class Work extends Component {
     toggleModalFC() {
         this.setState({
             isFCModalOpen: !this.state.isFCModalOpen
+        });
+    }
+
+    toggleModalMT() {
+        this.setState({
+            isMTModalOpen: !this.state.isMTModalOpen
         });
     }
 
@@ -168,12 +223,14 @@ class Work extends Component {
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Product Management • Web Design
+                                <Badge bg="" style={{backgroundColor: '#00cbc7'}} pill>Product Management</Badge> • <Badge bg="" style={{backgroundColor: '#d484fe'}} pill>Web Design</Badge>
                             </CardSubtitle>
                             <CardText>
                                 At Merchtable I owned all aspects of our software platfrom, from initial design, to managing the development team, designing new features, and even committing and deploying my own branches.
                             </CardText>
-                            <Button>
+                            <Button onClick={() => 
+                                this.toggleModalMT()
+                            }>
                                 Learn More
                             </Button>
                             </CardBody>
@@ -271,6 +328,15 @@ class Work extends Component {
 
                                 <p>A year after her successful launch, we turned the focus to expanding marketing. I worked with the Instagram Shopping team at Facebook to integrate direct product listings into the Female Collective Instagram feed. This allowed her followers to purchase directly from Instagram, without ever having to leave the app, all the while sending the sales data to our platform for fulfillment. Additionally I provided reporting on insights and the success of each campaign.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={fcPhotos} />
+                            </ModalBody>
+                        </Modal>
+                        <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isMTModalOpen} toggle={this.toggleModalMT}>
+                            <ModalHeader toggle={this.toggleModalMT}>Merchtable and Blue Collar Press</ModalHeader>
+                            <ModalBody>
+                                <p>I literally built Merchtable (formerly Blue Collar Distro) with my bare hands, starting with framing the darkroom in our first basement space. From my earliest build of the website using Dreamweaver and Fireworks in 2002, through transitions to MivaMerchant, followed by overseeing an OSCommerce rebuild with Varien, to our most current version which runs on Ruby on Rails which was built and launched in 2012, I have either built, designed, or product managed the entire platform (sometimes all three).</p>
+
+                                <p>Probably my favorite aspect is working on user interfaces. I designed Merchtable to have an extremely flexible front-end, so that each store on our platform to look and feel entirely unique. However for the back-end I had an entirely different challenge - make a single cohesive experience that could be used by our staff to reliably and accurately process important data such as sales an inventory. Actually make that two back-ends, because I had to do it all over again when I designed our management portal, a service to be used by our artists and managers to analyze their data directly.</p>
+                                <PhotoAlbum layout="rows" targetRowHeight={350} photos={mtPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
