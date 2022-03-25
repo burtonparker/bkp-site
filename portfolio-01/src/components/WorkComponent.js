@@ -192,6 +192,14 @@ const vmPhotos = [
     }
 ];
 
+const kbPhotos = [
+    {
+        src: "./assets/images/kenyan-birth-certificate-generator.jpg",
+        width: 1698,
+        height: 3349
+    }
+];
+
 class Work extends Component {
 
     constructor(props) {
@@ -466,6 +474,17 @@ class Work extends Component {
                                 
                                 <p>I worked with a local packaging company on several initial prototypes. Some of them were very <i>very</i> weird, but eventually I settled on a design that adequately protected all corners of the album(s) in the shipment. To reduce waste, I had our logo die-cut from the center of the interior, which not only looked cool and expanded brand awareness, but had the effect of reducing the weight of every mailer by about 15% - that's a lot of carbon - especially considering the mailers now only had to travel across town instead of multiple states. All together this project had the effect of impacting the environment and local economy positively, while showing both clients and customers that their voices were indeed heard.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={vmPhotos} />
+                            </ModalBody>
+                        </Modal>
+                        <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isKBModalOpen} toggle={this.toggleModalKB}>
+                            <ModalHeader toggle={this.toggleModalKB}>We're All President Now</ModalHeader>
+                            <ModalBody>
+                                <p>In 2009, like a lot of people, I was freaked out and annoyed that there was a growing conspiracy theory about President Obama's birth certificate. My friend <a href="https://wlrs.net/" target="_blank">Joey</a> is a developer, and over IM we kicked around the idea of making it so <i>everyone</i> could be born in Kenya. I registered a domain and tracked down a high res image of the birth certificate and wiped it clean in Photoshop. Joey got to work coding a simple one-page site that allowed people to enter their own info and generate <i>their</i> certificate of live birth.</p>
+                                
+                                <p>Within a single work day the entire site was built. We launched it and things took off very <i>very</i> quickly. By the next day we'd been interviewed by the Washington Times, Rachel Maddow did a segment, and the site was written about on <a href="https://www.vanityfair.com/news/2009/08/now-you-can-have-your-very-own-kenyan-birth-certificate" target="_blank">Vanity Fair</a>, <a href="https://www.salon.com/2009/08/05/kenyan_certificate/" target="_blank">Salon</a>, <a href="https://www.gawker.com/5330861/create-your-own-kenyan-birth-certificates-and-save" target="_blank">Gawker</a>, and even <a href="https://www.snopes.com/fact-check/kenyan-mistake/" target="_blank">Snopes</a>.</p>
+
+                                <p>This project was directly responsible for sparking my deeper interest in eventually learning to code myself, because I was blown away that Joey and I were able to go from concept to reality in such a short amount of time.</p>
+                                <PhotoAlbum layout="rows" targetRowHeight={350} photos={kbPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
