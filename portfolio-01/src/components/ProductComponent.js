@@ -32,16 +32,16 @@ function RenderCart({ product }) {
                 <tbody>
                     <tr>
                     <th scope="row">
-                        <img src={product.secondaryImage} alt={product.name}></img>
+                        <img src={product.secondaryImage} alt={product.name} width="75"></img>
                     </th>
-                    <td>
-                        <span className="align-middle">{product.subtitle}</span>
+                    <td className="align-middle">
+                        <span>{product.subtitle}</span>
                     </td>
-                    <td>
-                        <span className="align-middle">{product.inventory}</span>
+                    <td className="align-middle">
+                        <span>{product.inventory}</span>
                     </td>
-                    <td>
-                        <span className="align-middle">{product.price}</span>
+                    <td className="align-middle">
+                        <span>{product.price}</span>
                     </td>
                     </tr>
                 </tbody>
@@ -152,7 +152,6 @@ class Product extends Component {
                     <ModalHeader toggle={this.toggleModalCart}>Your Cart</ModalHeader>
                     <ModalBody>
                         <RenderCart product={product} />
-                        {this.state.award}
                     </ModalBody>
                 </Modal>
                 <Modal centered='true' isOpen={this.state.isGrinchModalOpen} toggle={this.toggleModalGrinch}>
