@@ -33,10 +33,7 @@ function RenderCart({ product }) {
                 <tbody>
                     <tr>
                     <th scope="row">
-                        <ThumbnailBasic
-                            src={product.secondaryImage} 
-                            alt={product.name}
-                        />
+                        <img src={product.secondaryImage} alt={product.name}></img>
                     </th>
                     <td>
                         <span className="align-middle">{product.subtitle}</span>
