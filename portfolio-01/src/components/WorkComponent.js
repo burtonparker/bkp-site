@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardGroup, CardBody, CardSubtitle, CardText, Button, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Badge, Card, CardImg, CardGroup, CardBody, CardSubtitle, CardText, Button, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import PhotoAlbum from 'react-photo-album';
 
 const jonahPhotos = [
@@ -30,6 +30,34 @@ const jonahPhotos = [
     }
 ];
 
+const fcPhotos = [
+    {
+        src: "./assets/images/female-collective-merchtable-front-page.jpg",
+        width: 1920,
+        height: 3304
+    },
+    {
+        src: "./assets/images/female-collective-merchtable-product-page.jpg",
+        width: 1920,
+        height: 1976
+    },
+    {
+        src: "./assets/images/female-collective-instagram-launch.jpg",
+        width: 1080,
+        height: 1920
+    },
+    {
+        src: "./assets/images/female-collective-myou-hat.jpg",
+        width: 1080,
+        height: 1920
+    },
+    {
+        src: "./assets/images/female-collective-insights.jpg",
+        width: 887,
+        height: 1920
+    }
+];
+
 class Work extends Component {
 
     constructor(props) {
@@ -39,11 +67,18 @@ class Work extends Component {
         };
 
         this.toggleModalJonah = this.toggleModalJonah.bind(this);
+        this.toggleModalFC = this.toggleModalFC.bind(this);
     }
 
     toggleModalJonah() {
         this.setState({
             isJonahModalOpen: !this.state.isJonahModalOpen
+        });
+    }
+
+    toggleModalFC() {
+        this.setState({
+            isFCModalOpen: !this.state.isFCModalOpen
         });
     }
 
@@ -60,6 +95,7 @@ class Work extends Component {
                         <p>
                         Admission is free, so won't you please take a tour of some of my work?
                         </p>
+                        <p>For starters <i>this website</i> was built by me from the ground up, using React and Redux, with dependencies including <a href="https://www.npmjs.com/package/reactstrap" target="_blank">reactstrap</a> and <a href="https://www.npmjs.com/package/react-photo-album" target="_blank">react-photo-album</a>. The full repo is public on GitHub if you want to check out how I put it all together. <a href="https://github.com/burtonparker/bkp-site" target="_blank">Take a look here!</a></p>
                     </div>
                     <div className="col">
                         <CardGroup>
@@ -78,7 +114,7 @@ class Work extends Component {
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                Typography • Illustration
+                                <Badge bg="" style={{backgroundColor: '#ff5f2e'}} pill>Typography</Badge> • <Badge bg="" style={{backgroundColor: '#3173a2'}} pill>Illustration</Badge>
                             </CardSubtitle>
                             <CardText>
                                 When Jonah Ray became the new host of Mystery Science Theater 3000 it fulfilled a lifelong dream, which he documented in a series of photographs during their U.S. tour. We worked together to turn those pictures into a limited edition zine.
@@ -105,12 +141,14 @@ class Work extends Component {
                                 className="mb-2 text-muted"
                                 tag="h6"
                             >
-                                UI • UX • Marketing
+                                <Badge bg="" style={{backgroundColor: '#1fb25a'}} pill>UI</Badge> • <Badge bg="" style={{backgroundColor: '#f70ff7'}} pill>UX</Badge> • <Badge bg="" style={{backgroundColor: '#eed300'}} pill>Marketing</Badge>
                             </CardSubtitle>
                             <CardText>
                                 I was responsible for translating Candace Reels dynamic voice into a shopping experience that felt like a natural extension of her social media presence.
                             </CardText>
-                            <Button>
+                            <Button onClick={() => 
+                                this.toggleModalFC()
+                            }>
                                 Learn More
                             </Button>
                             </CardBody>
@@ -222,8 +260,17 @@ class Work extends Component {
                         <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isJonahModalOpen} toggle={this.toggleModalJonah}>
                             <ModalHeader toggle={this.toggleModalJonah}>Making Zines With Jonah</ModalHeader>
                             <ModalBody>
-                                For this project, I had Jonah simply share an iPhoto album with me so I could quickly get access to all of his photographs. On the cover, I made a hand-drawn illustration of Jonah and then mixed in some paint and shape effects using my iPad. I used Adobe Typekit for the typography, my goal was to have something that felt ever so slightly worn, since this was in essence a tour diary. In order to keep the budget under control, I was able to source a print-on-demand book publisher out of Omaha, Nebraska, which allowed Jonah and I to only have to commit to small print runs, as the zine was initially only intended to be sold at comic conventions.
+                                <p>For this project, I had Jonah simply share an iPhoto album with me so I could quickly get access to all of his photographs. On the cover, I made a hand-drawn illustration of Jonah and then mixed in some paint and shape effects using my iPad. I used Adobe Typekit for the typography, my goal was to have something that felt ever so slightly worn, since this was in essence a tour diary. In order to keep the budget under control, I was able to source a print-on-demand book publisher out of Omaha, Nebraska, which allowed Jonah and I to only have to commit to small print runs, as the zine was initially only intended to be sold at comic conventions.</p>
                                 <PhotoAlbum layout="rows" targetRowHeight={350} photos={jonahPhotos} />
+                            </ModalBody>
+                        </Modal>
+                        <Modal size="xl" className="modal-fullscreen" isOpen={this.state.isFCModalOpen} toggle={this.toggleModalFC}>
+                            <ModalHeader toggle={this.toggleModalFC}>Making Zines With Jonah</ModalHeader>
+                            <ModalBody>
+                                <p>Female Collective was experiencing explosive growth from their viral Instagram posts and was looking to expand into select merchandise offerings. I was tasked with extending their visual language into a storefront. I designed the store layout itself in Liquid and SCSS, while integrating MailChimp into the header so we could encourage growth while following all the appropriate privacy best practices (aka, no forced opt-in!).</p>
+
+                                <p>A year after her successful launch, we turned the focus to expanding marketing. I worked with the Instagram Shopping team at Facebook to integrate direct product listings into the Female Collective Instagram feed. This allowed her followers to purchase directly from Instagram, without ever having to leave the app, all the while sending the sales data to our platform for fulfillment. Additionally I provided reporting on insights and the success of each campaign.</p>
+                                <PhotoAlbum layout="rows" targetRowHeight={350} photos={fcPhotos} />
                             </ModalBody>
                         </Modal>
                     </div>
