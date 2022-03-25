@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Card, CardImg, Button, Modal, ModalBody, ModalHeader, Table } from 'reactstrap';
-import ThumbnailBasic from '@s-ui/react-thumbnail-basic'
 
 function RenderProduct({ product }) {
     return (
