@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardImg, Button, Modal, ModalBody, ModalHeader, Table } from 'reactstrap';
+import ThumbnailBasic from '@s-ui/react-thumbnail-basic'
 
 function RenderProduct({ product }) {
     return (
@@ -32,16 +33,20 @@ function RenderCart({ product }) {
                 <tbody>
                     <tr>
                     <th scope="row">
-                        <img src={product.secondaryImage} alt={product.name}></img>
+                        <ThumbnailBasic
+                            src={product.secondaryImage} 
+                            alt={product.name}
+                            size='large'
+                        />
                     </th>
                     <td>
-                        {product.subtitle}
+                        <span className="align-middle">{product.subtitle}</span>
                     </td>
                     <td>
-                        {product.inventory}
+                        <span className="align-middle">{product.inventory}</span>
                     </td>
                     <td>
-                        {product.price}
+                        <span className="align-middle">{product.price}</span>
                     </td>
                     </tr>
                 </tbody>

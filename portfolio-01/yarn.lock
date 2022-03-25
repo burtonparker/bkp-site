@@ -1357,6 +1357,46 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
+"@s-ui/component-dependencies@1":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@s-ui/component-dependencies/-/component-dependencies-1.7.0.tgz#4e567634528441a7c40e8db74fb38e9a363fe481"
+  integrity sha512-WWqnhZm1cP19w5rswotAaLlsT1HY28oX6FJyDKeQAQiOgymklfeb3BjYBO9QGqmGzOi4gYe4kdGOZbcW6kG6ig==
+  dependencies:
+    "@s-ui/theme" "8"
+    "@schibstedspain/sui-theme" "8"
+    "@schibstedspain/theme-basic" "7"
+    classnames "2.2.5"
+
+"@s-ui/react-image-placeholder@2":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@s-ui/react-image-placeholder/-/react-image-placeholder-2.10.0.tgz#62c0bbf3282520f3244cf9f8e853057d7cc9a4cc"
+  integrity sha512-wSvd5yQ1niHxyu2Sn4pg7FgRfe01FrhboiCEQdsKVRRFJ5oDZSwHipY+rK4BkzH11qe7uOYLUxYH+06QCQU/TA==
+  dependencies:
+    "@s-ui/component-dependencies" "1"
+
+"@s-ui/react-thumbnail-basic@^1.19.0":
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/@s-ui/react-thumbnail-basic/-/react-thumbnail-basic-1.19.0.tgz#5ebbdeb32cd4475559b89e38c27e2b4cafa219ba"
+  integrity sha512-6WAZyo1azzEGf8mJal4Bag16VwG4Go1NO0DAkKRqq7pORq9bCUkSB32NwJfpO67GhYoN3a3elJ5wNCdK9orbzw==
+  dependencies:
+    "@s-ui/component-dependencies" "1"
+    "@s-ui/react-image-placeholder" "2"
+
+"@s-ui/theme@8":
+  version "8.122.0"
+  resolved "https://registry.yarnpkg.com/@s-ui/theme/-/theme-8.122.0.tgz#731b8c35df313629afb73fa29901bd5c5d0a26b8"
+  integrity sha512-BuMo1KM69UouY9dGTZBuog/2uMeFBDyqNlmA8CzTh14Zzk4b9CCygO0X7344lftqgZ04ReuKTMUVay5HieM3Qw==
+
+"@schibstedspain/sui-theme@8":
+  version "8.69.0"
+  resolved "https://registry.yarnpkg.com/@schibstedspain/sui-theme/-/sui-theme-8.69.0.tgz#c86936ad2de292512e9586111bf899102dba7eb7"
+  integrity sha512-0WzFXGOITJug30rBq1M7Ndmdaeizu6biTN/BdrHhfivYlfBd8xDJ8p7P2JcrH8cCXsmo1aL/ql1HtC8Y5l/i1w==
+
+"@schibstedspain/theme-basic@7":
+  version "7.28.0"
+  resolved "https://registry.yarnpkg.com/@schibstedspain/theme-basic/-/theme-basic-7.28.0.tgz#95d28bd9395e8d2fdef3f3028bcf34b31491f82d"
+  integrity sha1-ldKL2TlejS/e8/MCi880sxSR+C0=
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.3.tgz"
@@ -3177,6 +3217,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+  integrity sha1-+zgB1FNGdknvNgPH1hoCvRKb3m0=
 
 classnames@^2.2.3:
   version "2.3.1"
