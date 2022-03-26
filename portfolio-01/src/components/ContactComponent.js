@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Badge } from 'reactstrap';
 import Iframe from 'react-iframe';
 
 class Contact extends Component {
@@ -19,20 +20,20 @@ class Contact extends Component {
                             <h1>
                                 Contact Me
                             </h1>
-                            <h5>
-                                <a href="mailto:burtonparker@gmail.com" className="text-success">burtonparker (at) gmail (dot) com</a>
-                            </h5>
                             <h4>
-                                <i>785-592-1391</i>
+                                <Badge bg="" href="mailto:burtonparker@gmail.com" style={{backgroundColor: '#00f468'}} pill>burtonparker@gmail.com</Badge>
                             </h4>
+                            <h3>
+                                <i>785-592-1391</i>
+                            </h3>
                             <hr></hr>
-                            <i style={{color: '#333333'}} className="fa fa-github fa-lg" /><span className="align-middle"> <a href="https://github.com/burtonparker" target="_blank" className="text-secondary">GitHub</a></span>
+                            <i style={{color: '#333333'}} className="fa fa-github fa-lg" /><span className="align-middle lead"> <a href="https://github.com/burtonparker" target="_blank" className="text-secondary">GitHub</a></span>
                             <br />
-                            <i style={{color: '#0b65c2'}} className="fa fa-linkedin fa-lg" /><span className="align-middle"> <a href="https://www.linkedin.com/in/burtonkarasparker/" target="_blank" className="text-secondary">LinkedIn</a></span>
+                            <i style={{color: '#0b65c2'}} className="fa fa-linkedin fa-lg" /><span className="align-middle lead"> <a href="https://www.linkedin.com/in/burtonkarasparker/" target="_blank" className="text-secondary">LinkedIn</a></span>
                             <br />
-                            <i style={{color: '#e94c89'}} className="fa fa-dribbble fa-lg" /><span className="align-middle"> <a href="https://dribbble.com/welvis" target="_blank" className="text-secondary">Dribbble</a></span>
+                            <i style={{color: '#e94c89'}} className="fa fa-dribbble fa-lg" /><span className="align-middle lead"> <a href="https://dribbble.com/welvis" target="_blank" className="text-secondary">Dribbble</a></span>
                             <br />
-                            <i style={{color: '#0162dc'}} className="fa fa-flickr fa-lg" /><span className="align-middle"> <a href="https://www.flickr.com/photos/welvistarn/" target="_blank" className="text-secondary">Flickr</a></span>
+                            <i style={{color: '#0162dc'}} className="fa fa-flickr fa-lg" /><span className="align-middle lead"> <a href="https://www.flickr.com/photos/welvistarn/" target="_blank" className="text-secondary">Flickr</a></span>
                         </div>
                     </div>
                 </div>
