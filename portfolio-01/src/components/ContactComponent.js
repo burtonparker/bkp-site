@@ -24,7 +24,7 @@ class Contact extends Component {
                                 <Badge bg="" href="mailto:burtonparker@gmail.com" style={{backgroundColor: '#00f468'}} pill>burtonparker@gmail.com</Badge>
                             </h4>
                             <h3>
-                                <i>785-592-1391</i>
+                                <i className="fa fa-globe fa-lg" /> <i>Lawrence, Kansas</i>
                             </h3>
                             <hr></hr>
                             <i style={{color: '#333333'}} className="fa fa-github fa-lg" /><span className="align-middle lead"> <a href="https://github.com/burtonparker" target="_blank" className="text-secondary">GitHub</a></span>
