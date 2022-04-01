@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Card, CardImg } from 'reactstrap';
 
 class About extends Component {
+    
+    componentDidMount() {
+        document.title = 'Burton Parker: About Me'
+      }
+
     render() {
         return (
             <React.Fragment>

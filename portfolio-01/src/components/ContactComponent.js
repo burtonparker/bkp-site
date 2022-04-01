@@ -3,6 +3,11 @@ import { Badge } from 'reactstrap';
 import Iframe from 'react-iframe';
 
 class Contact extends Component {
+
+    componentDidMount() {
+        document.title = 'Burton Parker: Contact Me'
+      }
+
     render() {
         return (
             <React.Fragment>

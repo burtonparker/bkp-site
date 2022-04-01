@@ -202,6 +202,10 @@ const kbPhotos = [
 
 class Work extends Component {
 
+    componentDidMount() {
+        document.title = 'Burton Parker: My Work'
+      }    
+
     constructor(props) {
         super(props);
         this.state = {
