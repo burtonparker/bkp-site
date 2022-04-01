@@ -4,7 +4,7 @@ import { Card, CardImg } from 'reactstrap';
 class About extends Component {
     
     componentDidMount() {
-        document.title = 'Burton Parker: About Me'
+        document.title = 'About Me • Burton Parker'
       }
 
     render() {

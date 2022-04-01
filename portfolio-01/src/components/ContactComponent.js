@@ -5,7 +5,7 @@ import Iframe from 'react-iframe';
 class Contact extends Component {
 
     componentDidMount() {
-        document.title = 'Burton Parker: Contact Me'
+        document.title = 'Contact Me • Burton Parker'
       }
 
     render() {

@@ -203,7 +203,7 @@ const kbPhotos = [
 class Work extends Component {
 
     componentDidMount() {
-        document.title = 'Burton Parker: My Work'
+        document.title = 'My Work • Burton Parker'
       }    
 
     constructor(props) {

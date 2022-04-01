@@ -64,7 +64,7 @@ function RenderCart({ product }) {
 class Product extends Component {
 
     componentDidMount() {
-        document.title = 'Burton Parker: Web Development & Product Management'
+        document.title = 'Burton Parker • Web Development & Product Management'
       }      
 
     constructor(props) {
