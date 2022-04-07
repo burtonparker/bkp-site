@@ -39,7 +39,7 @@ class Main extends Component {
               <Route exact path='/' render={() => <Product products={this.props.products} awards={this.props.awards} skills={this.props.skills}/>} />
               <Route exact path='/home' render={() => <Product products={this.props.products} awards={this.props.awards} skills={this.props.skills}/>} />
               <Route exact path='/work' render={() => <Work />} />
-              <Route exact path="/about" render={() => <About key={Date.now()}/>} />
+              <Route exact path="/about" render={() => <About />} />
               <Route exact path='/contact' render={() => <Contact />} />
             </Switch>
             <Footer />
