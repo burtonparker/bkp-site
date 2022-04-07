@@ -10,6 +10,8 @@ import Work from './WorkComponent';
 import Contact from './ContactComponent';
 import { addAwards } from '../redux/ActionCreators';
 
+const location = useLocation();
+
 // tweaks to orig main component
 
 const mapDispatchToProps = {
@@ -39,7 +41,7 @@ class Main extends Component {
               <Route exact path='/' render={() => <Product products={this.props.products} awards={this.props.awards} skills={this.props.skills}/>} />
               <Route exact path='/home' render={() => <Product products={this.props.products} awards={this.props.awards} skills={this.props.skills}/>} />
               <Route exact path='/work' render={() => <Work />} />
-              <Route exact path="/about" render={() => <About />} />
+              <Route exact path="/about" render={() => <About key={location.key}/>} />
               <Route exact path='/contact' render={() => <Contact />} />
             </Switch>
             <Footer />
