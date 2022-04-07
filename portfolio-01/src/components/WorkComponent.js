@@ -4,27 +4,27 @@ import { Badge, Button, Card, CardBody, CardGroup, CardImg, CardSubtitle, CardTe
 
 const jonahPhotos = [
     {
-        src: "./assets/images/jonah-cover.jpg",
+        src: "/assets/images/jonah-cover.jpg",
         width: 1267,
         height: 1920
     },
     {
-        src: "./assets/images/jonah-crow.jpg",
+        src: "/assets/images/jonah-crow.jpg",
         width: 1920,
         height: 1920
     },
     {
-        src: "./assets/images/jonah-kansas-city.jpg",
+        src: "/assets/images/jonah-kansas-city.jpg",
         width: 1920,
         height: 1440
     },
     {
-        src: "./assets/images/jonah-papa-bear.jpg",
+        src: "/assets/images/jonah-papa-bear.jpg",
         width: 1920,
         height: 1440
     },
     {
-        src: "./assets/images/jonah-we-rolled.jpg",
+        src: "/assets/images/jonah-we-rolled.jpg",
         width: 1920,
         height: 1440
     }
@@ -32,27 +32,27 @@ const jonahPhotos = [
 
 const fcPhotos = [
     {
-        src: "./assets/images/female-collective-merchtable-front-page.jpg",
+        src: "/assets/images/female-collective-merchtable-front-page.jpg",
         width: 1920,
         height: 3304
     },
     {
-        src: "./assets/images/female-collective-merchtable-product-page.jpg",
+        src: "/assets/images/female-collective-merchtable-product-page.jpg",
         width: 1920,
         height: 1976
     },
     {
-        src: "./assets/images/female-collective-instagram-launch.jpg",
+        src: "/assets/images/female-collective-instagram-launch.jpg",
         width: 1080,
         height: 1920
     },
     {
-        src: "./assets/images/female-collective-myou-hat.jpg",
+        src: "/assets/images/female-collective-myou-hat.jpg",
         width: 1080,
         height: 1920
     },
     {
-        src: "./assets/images/female-collective-insights.jpg",
+        src: "/assets/images/female-collective-insights.jpg",
         width: 887,
         height: 1920
     }
@@ -60,47 +60,47 @@ const fcPhotos = [
 
 const mtPhotos = [
     {
-        src: "./assets/images/merchtable-stock-withdrawal.jpg",
+        src: "/assets/images/merchtable-stock-withdrawal.jpg",
         width: 1920,
         height: 819
     },
     {
-        src: "./assets/images/merchtable-royalty-report.jpg",
+        src: "/assets/images/merchtable-royalty-report.jpg",
         width: 1920,
         height: 1196
     },
     {
-        src: "./assets/images/merchtable-regional-report.jpg",
+        src: "/assets/images/merchtable-regional-report.jpg",
         width: 1920,
         height: 1854
     },
     {
-        src: "./assets/images/merchtable-dashboard.jpg",
+        src: "/assets/images/merchtable-dashboard.jpg",
         width: 1920,
         height: 1281
     },
     {
-        src: "./assets/images/merchtable-petit-biscuit-front-page.jpg",
+        src: "/assets/images/merchtable-petit-biscuit-front-page.jpg",
         width: 619,
         height: 1920
     },
     {
-        src: "./assets/images/merchtable-petit-biscuit-product-page.jpg",
+        src: "/assets/images/merchtable-petit-biscuit-product-page.jpg",
         width: 1246,
         height: 2069
     },
     {
-        src: "./assets/images/merchtable-blazer.jpg",
+        src: "/assets/images/merchtable-blazer.jpg",
         width: 1920,
         height: 1162
     },
     {
-        src: "./assets/images/merchtable-burton-parker-warehouse.jpg",
+        src: "/assets/images/merchtable-burton-parker-warehouse.jpg",
         width: 1864,
         height: 1242
     },
     {
-        src: "./assets/images/merchtable-burton-parker-office.jpg",
+        src: "/assets/images/merchtable-burton-parker-office.jpg",
         width: 1920,
         height: 1280
     }
@@ -108,67 +108,67 @@ const mtPhotos = [
 
 const vcPhotos = [
     {
-        src: "./assets/images/various-deck-01.jpg",
+        src: "/assets/images/various-deck-01.jpg",
         width: 1920,
         height: 1075
     },
     {
-        src: "./assets/images/various-deck-02.jpg",
+        src: "/assets/images/various-deck-02.jpg",
         width: 1920,
         height: 1075
     },
     {
-        src: "./assets/images/various-deck-03.jpg",
+        src: "/assets/images/various-deck-03.jpg",
         width: 1920,
         height: 1075
     },
     {
-        src: "./assets/images/various-deck-04.jpg",
+        src: "/assets/images/various-deck-04.jpg",
         width: 1920,
         height: 1075
     },
     {
-        src: "./assets/images/various-ps-hoodie.jpg",
+        src: "/assets/images/various-ps-hoodie.jpg",
         width: 2000,
         height: 2000
     },
     {
-        src: "./assets/images/various-ps-tee.jpg",
+        src: "/assets/images/various-ps-tee.jpg",
         width: 2500,
         height: 1394
     },
     {
-        src: "./assets/images/various-ps-logos.jpg",
+        src: "/assets/images/various-ps-logos.jpg",
         width: 1920,
         height: 1920
     },
     {
-        src: "./assets/images/various-candle-01.jpg",
+        src: "/assets/images/various-candle-01.jpg",
         width: 1280,
         height: 1280
     },
     {
-        src: "./assets/images/various-candle-02.jpg",
+        src: "/assets/images/various-candle-02.jpg",
         width: 1050,
         height: 1050
     },
     {
-        src: "./assets/images/various-deck-cuco.jpg",
+        src: "/assets/images/various-deck-cuco.jpg",
         width: 1920,
         height: 1065
     },
     {
-        src: "./assets/images/various-dillon-francis-bag.jpg",
+        src: "/assets/images/various-dillon-francis-bag.jpg",
         width: 1920,
         height: 1920
     },
     {
-        src: "./assets/images/various-gerald-stocking.jpg",
+        src: "/assets/images/various-gerald-stocking.jpg",
         width: 1920,
         height: 1920
     },
     {
-        src: "./assets/images/various-idgafos-pillow.jpg",
+        src: "/assets/images/various-idgafos-pillow.jpg",
         width: 1000,
         height: 1000
     }
@@ -176,17 +176,17 @@ const vcPhotos = [
 
 const vmPhotos = [
     {
-        src: "./assets/images/vm-mailer-01.jpg",
+        src: "/assets/images/vm-mailer-01.jpg",
         width: 1920,
         height: 998
     },
     {
-        src: "./assets/images/vm-mailer-02.jpg",
+        src: "/assets/images/vm-mailer-02.jpg",
         width: 1920,
         height: 1920
     },
     {
-        src: "./assets/images/vm-mailer-03.jpg",
+        src: "/assets/images/vm-mailer-03.jpg",
         width: 1920,
         height: 1920
     }
@@ -194,7 +194,7 @@ const vmPhotos = [
 
 const kbPhotos = [
     {
-        src: "./assets/images/kenyan-birth-certificate-generator.jpg",
+        src: "/assets/images/kenyan-birth-certificate-generator.jpg",
         width: 1698,
         height: 3349
     }
@@ -303,7 +303,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Female Collective"
-                            src="./assets/images/work-female-collective.jpg"
+                            src="/assets/images/work-female-collective.jpg"
                             top
                             width="100%"
                             />
@@ -330,7 +330,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Merchtable"
-                            src="./assets/images/work-merchtable.jpg"
+                            src="/assets/images/work-merchtable.jpg"
                             top
                             width="100%"
                             />
@@ -360,7 +360,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Product Design"
-                            src="./assets/images/work-dillon-francis.jpg"
+                            src="/assets/images/work-dillon-francis.jpg"
                             top
                             width="100%"
                             />
@@ -387,7 +387,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Vinyl Mailers"
-                            src="./assets/images/work-packaging-design.jpg"
+                            src="/assets/images/work-packaging-design.jpg"
                             top
                             width="100%"
                             />
@@ -414,7 +414,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Kenyan Birth Certificate Generator"
-                            src="./assets/images/work-kenyan-birth-certificate-generator.jpg"
+                            src="/assets/images/work-kenyan-birth-certificate-generator.jpg"
                             top
                             width="100%"
                             />
