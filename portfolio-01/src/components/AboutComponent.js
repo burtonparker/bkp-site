@@ -14,7 +14,7 @@ class About extends Component {
                     <div className="row">
                         <div className="col-md-4">
                                 <Card>
-                                    <CardImg width="100%" src="./assets/images/burton-karas-parker-about.jpg" alt="Burton Karas Parker" title="Burton Parker" />
+                                    <CardImg width="100%" src="./assets/images/burton-karas-parker-about.jpg" alt="Burton Karas Parker" title="Burton Parker" key={Date.now()}/>
                                 </Card>
                                 <cite>Hair by Supercuts.</cite>
                         </div>
