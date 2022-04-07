@@ -276,7 +276,7 @@ class Work extends Component {
                         <Card>
                             <CardImg
                             alt="Jonah Ray"
-                            src="./assets/images/work-jonah-ray.jpg"
+                            src="/assets/images/work-jonah-ray.jpg"
                             top
                             width="100%"
                             />
