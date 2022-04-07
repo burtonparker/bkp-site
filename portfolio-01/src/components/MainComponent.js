@@ -42,6 +42,7 @@ class Main extends Component {
               <Route exact path="/about" render={() => <About />} />
               <Route exact path='/contact' render={() => <Contact />} />
             </Switch>
+            <Footer />
         </div>
       );
     };
