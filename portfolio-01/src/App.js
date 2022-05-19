@@ -9,8 +9,6 @@ import './App.css';
 const store = ConfigureStore();
 
 function IPLogger() {
-  //creating IP state
-  const [ip, setIP] = useState('');
 
   let currentIP;
 
@@ -36,7 +34,6 @@ function IPLogger() {
         },
       });
     })
-    setIP(res.data.IPv4)
   }
   
   useEffect( () => {
