@@ -25,12 +25,16 @@ function IPLogger() {
         headers: {
           'Content-Type': 'application/json'
         },
-        url: 'https://api.mailslurp.com/sendEmail?apiKey=4f8a856a48c661e3719331db35c37447a3f9743c8e5642f47ac16f56a08c0e49',
-        data: {
-          senderId: '62230ce2-abaa-4f94-9dd1-caea384b63e0',
-          to: '62230ce2-abaa-4f94-9dd1-caea384b63e0@mailslurp.com',
+        url: 'https://api.mailgun.net/v3/sandboxf3b5bf88576b4ae0af883af24ec8440e.mailgun.org/messages',
+        auth: {
+          username: 'api',
+          password: '6692fea59b7d25d5c28ccb3318c6aaff-8d821f0c-696a76be'
+        },
+        params: {
+          from: 'bkp.dev postmaster@sandboxf3b5bf88576b4ae0af883af24ec8440e.mailgun.org',
+          to: 'burtonparker@gmail.com',
           subject: `IP ADDRESS LOGGED: ${Date()}`,
-          body: JSON.stringify(currentIP),
+          text: JSON.stringify(currentIP),
         },
       });
     })
