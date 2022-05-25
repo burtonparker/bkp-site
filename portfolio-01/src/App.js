@@ -28,7 +28,7 @@ function IPLogger() {
         url: 'https://api.mailgun.net/v3/sandboxf3b5bf88576b4ae0af883af24ec8440e.mailgun.org/messages',
         auth: {
           username: 'api',
-          password: '6692fea59b7d25d5c28ccb3318c6aaff-8d821f0c-696a76be'
+          password: process.env.REACT_APP_MAILGUN_API_KEY 
         },
         params: {
           from: 'bkp.dev postmaster@sandboxf3b5bf88576b4ae0af883af24ec8440e.mailgun.org',
