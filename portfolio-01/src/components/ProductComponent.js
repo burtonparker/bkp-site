@@ -110,7 +110,7 @@ class Product extends Component {
             <div key={product.id} className="col-md-4 order-2 order-md-1">
                 <h1 className="text-center">{product.name}</h1>
                 <hr></hr>
-                <p className="text-justify">I am a resourceful full-stack developer, designer, and problem solver. Making systems work better is my specialty and I love to develop and grow new businesses. In 2017 <a href="#" 
+                <p className="text-justify">You found me! I love to make things, including <a href="https://shop.merchtable.com" target="_blank">an entire company</a>, <a href="https://outwave.co" target="_blank">or two</a>. Right now I build AI applications as a software engineer, but you might also find me doing product management, UI/UX design, or even creating extremely weird merchandise. In 2017 <a href="#" 
                         onClick={(event) => {
                         this.toggleModalGrinch();
                         event.preventDefault();
